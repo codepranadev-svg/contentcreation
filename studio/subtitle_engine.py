@@ -1,4 +1,4 @@
-"""ASS & SRT subtitle generator for Devanagari Hindi/Marathi storytelling."""
+"""ASS & SRT subtitle generator for Devanagari Hindi storytelling."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -75,8 +75,6 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
         st = float(sc["scene_start"])
         ed = min(float(sc["scene_end"]), st + 4.8)
         label = _ass_escape(f"दृश्य {sc['scene_number']} • {sc['scene_title']}")
-        if manifest["language"] == "mr":
-            label = _ass_escape(f"प्रसंग {sc['scene_number']} • {sc['scene_title']}")
         events.append(
             f"Dialogue: 1,{_ass_time(st + 0.2)},{_ass_time(ed)},SceneTag,,0,0,0,,{{\\fad(350,450)}}{label}"
         )

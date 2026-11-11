@@ -1,25 +1,23 @@
-# Hindi & Marathi Storytelling Studio (`contentcreation`)
+# Hindi Storytelling Studio (`contentcreation`)
 
-Automated, YouTube-ready **multi-voice, scene-tuned Hindi & Marathi story production studio** with situational vocal DSP, procedural rain/midnight music beds, synced Devanagari subtitles, 16:9 full videos, 9:16 YouTube Shorts teasers, high-CTR thumbnails, and optional local integration with [`debpalash/VoiceStudio`](https://github.com/debpalash/voicestudio).
+Automated, YouTube-ready **multi-voice, scene-tuned Hindi story production studio** with situational vocal DSP, procedural rain/midnight music beds, synced Devanagari subtitles, 16:9 full videos, 9:16 YouTube Shorts teasers, high-CTR thumbnails, and optional local integration with [`debpalash/VoiceStudio`](https://github.com/debpalash/voicestudio).
 
 ---
 
-## Repository Structure (Channel Convention)
+## Repository Structure (Hindi-Only Channel Convention)
 
 - **`hindi/YYYY-MM-DD/`** — Date-wise Hindi episode folders (e.g., `hindi/2026-11-11/`).
-- **`marathi/<story-slug>/`** — Story-name-wise Marathi episode folders (e.g., `marathi/adhuri-bhet-pavasali-raat/`).
 - **`studio/`** — Python + FFmpeg audio/video production engine (`director.py`, `soundscape.py`, `audio_engine.py`, `subtitle_engine.py`, `video_renderer.py`, `voicestudio_client.py`, `script_parser.py`, `daily_pipeline.py`).
-- **`templates/`** — Reusable daily Hindi & Marathi story blueprints + 7-day rotating non-repetitive YouTube-safe theme playbook.
+- **`templates/`** — Reusable daily Hindi story blueprint + 7-day rotating non-repetitive YouTube-safe theme playbook.
 - **`assets/fonts/`** — Bundled `NotoSansDevanagari.ttf` for clean Devanagari conjunct shaping via HarfBuzz/`libass`.
 
 ---
 
-## Today's Ready-to-Upload Episodes
+## Current Ready-to-Upload Episode
 
 | Language | Folder | Full Video (16:9) | Shorts Teaser (9:16) | Duration | Loudness |
 | --- | --- | --- | --- | --- | --- |
-| **Hindi** | `hindi/2026-11-11/` | `baarish-ki-woh-aakhiri-raat_full_16x9.mp4` | `baarish-ki-woh-aakhiri-raat_shorts_9x16.mp4` | ~07:56 | -14.2 LUFS |
-| **Marathi** | `marathi/adhuri-bhet-pavasali-raat/` | `adhuri-bhet-pavasali-raat_full_16x9.mp4` | `adhuri-bhet-pavasali-raat_shorts_9x16.mp4` | ~06:01 | -14.2 LUFS |
+| **Hindi** | `hindi/2026-11-11/` | `baarish-ki-woh-aakhiri-raat_full_16x9.mp4` | `baarish-ki-woh-aakhiri-raat_shorts_9x16.mp4` | ~07:46 | -14.2 LUFS |
 
 ---
 
@@ -32,9 +30,6 @@ pip install -r requirements.txt
 
 # Render a Hindi date-wise episode (add --res 1080 for 1080p)
 python -m studio.daily_pipeline --episode-dir hindi/2026-11-11
-
-# Render a Marathi story-name episode
-python -m studio.daily_pipeline --episode-dir marathi/adhuri-bhet-pavasali-raat
 ```
 
 ### Local [`debpalash/VoiceStudio`](https://github.com/debpalash/voicestudio) Integration
