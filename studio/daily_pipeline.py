@@ -20,6 +20,7 @@ def build_episode(
     use_voicestudio: bool = False,
     voicestudio_url: str | None = None,
     res: int = 720,
+    skip_audio: bool = False,
 ) -> dict:
     script_path = episode_dir / "script.json"
     if not script_path.exists():
@@ -28,14 +29,28 @@ def build_episode(
     script_data = json.loads(script_path.read_text(encoding="utf-8"))
     export_voicestudio_markdown(script_data, episode_dir / "script_voicestudio.md")
 
-    if use_voicestudio:
-        client = VoiceStudioClient(voicestudio_url) if voicestudio_url else VoiceStudioClient()
-        if not client.health_check():
-            raise RuntimeError(f"VoiceStudio server not reachable at {client.base_url}")
-        client.synthesize_story_segments(episode_dir, script_data)
+    manifest_path = episode_dir / "cue_timeline.json"
+    if skip_audio and manifest_path.exists():
+        print(f"[1/4] Reusing existing mastered audio & cue timeline in {episode_dir}...")
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        # Refresh visual shot definitions from script.json so dropped-in .mp4 clips take effect immediately.
+        seg_map = {s["id"]: s for s in script_data["segments"]}
+        for sc in manifest["scenes"]:
+            if sc["id"] in seg_map:
+                src = seg_map[sc["id"]]
+                sc["image"] = src["image"]
+                sc["short_image"] = src.get("short_image", src["image"])
+                sc["shots"] = src.get("shots", [])
+                sc["rain_overlay"] = bool(src.get("rain_overlay", False))
+    else:
+        if use_voicestudio:
+            client = VoiceStudioClient(voicestudio_url) if voicestudio_url else VoiceStudioClient()
+            if not client.health_check():
+                raise RuntimeError(f"VoiceStudio server not reachable at {client.base_url}")
+            client.synthesize_story_segments(episode_dir, script_data)
 
-    print(f"[1/4] Mixing multi-voice scene-tuned audio for {episode_dir}...")
-    manifest = produce_episode_audio(episode_dir, script_data)
+        print(f"[1/4] Mixing multi-voice scene-tuned audio for {episode_dir}...")
+        manifest = produce_episode_audio(episode_dir, script_data)
 
     print(f"[2/4] Rendering 16:9 Full Story Video ({res}p, {manifest['total_duration_s']:.1f}s)...")
     full_mp4 = render_full_16x9_video(episode_dir, manifest, res=res)
@@ -47,7 +62,7 @@ def build_episode(
     t16, t9 = render_thumbnails(episode_dir, manifest)
 
     scenes_dir = episode_dir / "scenes"
-    for pattern in ("*_dsp.wav", "*_raw_mix.wav", "*_master.wav", "*_vis.mp4", "*_short_*", "thumb_*.ass"):
+    for pattern in ("*_dsp.wav", "*_raw_mix.wav", "*_master.wav", "*_vis.mp4", "*_shot_*.mp4", "rain_loop_*.mp4", "*_short_*", "thumb_*.ass"):
         for tmp_f in scenes_dir.glob(pattern):
             tmp_f.unlink(missing_ok=True)
 
@@ -68,6 +83,7 @@ def main() -> None:
     parser.add_argument("--res", type=int, default=720, choices=[720, 1080], help="Output resolution height (720 or 1080)")
     parser.add_argument("--voicestudio", action="store_true", help="Synthesize missing raw audio via local VoiceStudio")
     parser.add_argument("--voicestudio-url", default=None, help="Local VoiceStudio URL (default http://127.0.0.1:8000)")
+    parser.add_argument("--skip-audio", action="store_true", help="Reuse existing mastered WAV & cue_timeline.json (fast re-render after swapping .mp4 clips)")
     args = parser.parse_args()
 
     result = build_episode(
@@ -75,6 +91,7 @@ def main() -> None:
         use_voicestudio=args.voicestudio,
         voicestudio_url=args.voicestudio_url,
         res=args.res,
+        skip_audio=args.skip_audio,
     )
     print(json.dumps(result, indent=2, ensure_ascii=False))
 

@@ -12,8 +12,27 @@
       "scene_title": "रात के डेढ़ बजे की दस्तक",
       "speaker": "narrator",
       "character_name": "कथावाचक",
-      "image": "scenes/scene_01.jpg",
+      "image": "scenes/shot_01a.jpg",
+      "short_image": "scenes/shot_01c.jpg",
+      "shots": [
+        {
+          "image": "scenes/shot_01a.jpg",
+          "camera_motion": "slow_zoom_in",
+          "weight": 0.36
+        },
+        {
+          "image": "scenes/shot_01b.jpg",
+          "camera_motion": "pan_right",
+          "weight": 0.3
+        },
+        {
+          "image": "scenes/shot_01c.jpg",
+          "camera_motion": "slow_zoom_out",
+          "weight": 0.34
+        }
+      ],
       "camera_motion": "slow_zoom_in",
+      "rain_overlay": false,
       "scene_start": 1.4,
       "voice_start": 1.8,
       "voice_end": 82.705,
@@ -212,8 +231,27 @@
       "scene_title": "सन्नाटे और अदरक की चाय का सच",
       "speaker": "female_lead",
       "character_name": "मीरा",
-      "image": "scenes/scene_02.jpg",
+      "image": "scenes/shot_02a.jpg",
+      "short_image": "scenes/shot_02a.jpg",
+      "shots": [
+        {
+          "image": "scenes/shot_02a.jpg",
+          "camera_motion": "slow_zoom_in",
+          "weight": 0.34
+        },
+        {
+          "image": "scenes/shot_02b.jpg",
+          "camera_motion": "pan_right",
+          "weight": 0.36
+        },
+        {
+          "image": "scenes/shot_02c.jpg",
+          "camera_motion": "slow_zoom_out",
+          "weight": 0.3
+        }
+      ],
       "camera_motion": "pan_right",
+      "rain_overlay": false,
       "scene_start": 83.655,
       "voice_start": 84.155,
       "voice_end": 183.036,
@@ -508,8 +546,30 @@
       "scene_title": "बालकनी की बारिश और अनकही चाहत",
       "speaker": "male_lead",
       "character_name": "आरव",
-      "image": "scenes/scene_03.jpg",
+      "image": "scenes/shot_03a.jpg",
+      "short_image": "scenes/shot_03b.jpg",
+      "shots": [
+        {
+          "image": "scenes/shot_03a.jpg",
+          "camera_motion": "slow_zoom_out",
+          "weight": 0.34,
+          "rain_overlay": true
+        },
+        {
+          "image": "scenes/shot_03b.jpg",
+          "camera_motion": "slow_zoom_in",
+          "weight": 0.36,
+          "rain_overlay": true
+        },
+        {
+          "image": "scenes/shot_03c.jpg",
+          "camera_motion": "pan_left",
+          "weight": 0.3,
+          "rain_overlay": true
+        }
+      ],
       "camera_motion": "slow_zoom_out",
+      "rain_overlay": true,
       "scene_start": 183.936,
       "voice_start": 184.386,
       "voice_end": 273.736,
@@ -772,8 +832,27 @@
       "scene_title": "बिस्तर के पास रखा वो छोटा सा नोट",
       "speaker": "female_lead",
       "character_name": "मीरा",
-      "image": "scenes/scene_04.jpg",
+      "image": "scenes/shot_04b.jpg",
+      "short_image": "scenes/shot_04b.jpg",
+      "shots": [
+        {
+          "image": "scenes/shot_04a.jpg",
+          "camera_motion": "slow_zoom_in",
+          "weight": 0.32
+        },
+        {
+          "image": "scenes/shot_04b.jpg",
+          "camera_motion": "pan_right",
+          "weight": 0.36
+        },
+        {
+          "image": "scenes/shot_04c.jpg",
+          "camera_motion": "slow_zoom_out",
+          "weight": 0.32
+        }
+      ],
       "camera_motion": "slow_zoom_in",
+      "rain_overlay": false,
       "scene_start": 274.736,
       "voice_start": 275.336,
       "voice_end": 371.439,
@@ -1004,8 +1083,27 @@
       "scene_title": "सुबह की पहली किरण और ईमानदार फ़ैसला",
       "speaker": "narrator",
       "character_name": "कथावाचक",
-      "image": "scenes/scene_05.jpg",
+      "image": "scenes/shot_05b.jpg",
+      "short_image": "scenes/shot_05b.jpg",
+      "shots": [
+        {
+          "image": "scenes/shot_05a.jpg",
+          "camera_motion": "slow_zoom_in",
+          "weight": 0.33
+        },
+        {
+          "image": "scenes/shot_05b.jpg",
+          "camera_motion": "pan_left",
+          "weight": 0.37
+        },
+        {
+          "image": "scenes/shot_05c.jpg",
+          "camera_motion": "slow_zoom_out",
+          "weight": 0.3
+        }
+      ],
       "camera_motion": "pan_left",
+      "rain_overlay": false,
       "scene_start": 372.539,
       "voice_start": 373.239,
       "voice_end": 462.354,
