@@ -154,7 +154,6 @@ def render_shorts_9x16_video(episode_dir: Path, manifest: dict, res: int = 720) 
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
     scenes_dir = episode_dir / "scenes"
     slug = manifest["slug"]
-    lang = manifest["language"]
     w, h = (1080, 1920) if res >= 1080 else (720, 1280)
     fg_h = int(w * 2 / 3)
     fg_y = int(h * 0.23)
@@ -222,8 +221,8 @@ def render_shorts_9x16_video(episode_dir: Path, manifest: dict, res: int = 720) 
         check=True,
     )
 
-    hook_title = "रात 1:30 बजे की वो दस्तक..." if lang == "hi" else "पावसाळी रात्रीची अधुरी भेट..."
-    cta_text = "पूरी कहानी चैनल पर देखें — लिंक बायो में" if lang == "hi" else "संपूर्ण कथा चॅनेलवर पहा"
+    hook_title = manifest.get("short_hook") or "रात 1:30 बजे की वो दस्तक..."
+    cta_text = "पूरी कहानी चैनल पर देखें — लिंक बायो में"
     short_ass = episode_dir / "subtitles_shorts.ass"
     write_shorts_ass(short_cues, hook_title, cta_text, cursor, short_ass)
 
@@ -277,19 +276,13 @@ def render_shorts_9x16_video(episode_dir: Path, manifest: dict, res: int = 720) 
 
 def render_thumbnails(episode_dir: Path, manifest: dict) -> tuple[Path, Path]:
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
-    lang = manifest["language"]
     hero_img = episode_dir / manifest["scenes"][2]["image"]
     if not hero_img.exists():
         hero_img = episode_dir / manifest["scenes"][0]["image"]
 
-    if lang == "hi":
-        badge = "दिल को छू लेने वाली कहानी"
-        headline = "बारिश की वो आख़िरी रात..."
-        subline = "जब 5 साल बाद अतीत ने दरवाज़ा खटखटाया!"
-    else:
-        badge = "मराठी भावनिक कथा"
-        headline = "अधुरी भेट — पावसाळी रात्र"
-        subline = "जेव्हा नात्याच्या सीमेवर मन डगमगलं..."
+    badge = "दिल को छू लेने वाली कहानी"
+    headline = "बारिश की वो आख़िरी रात..."
+    subline = "जब 5 साल बाद अतीत ने दरवाज़ा खटखटाया!"
 
     fonts_escaped = str(FONTS_DIR).replace("\\", "/").replace(":", "\\:")
 

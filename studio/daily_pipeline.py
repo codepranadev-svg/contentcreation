@@ -63,8 +63,8 @@ def build_episode(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Build Hindi/Marathi YouTube story episode")
-    parser.add_argument("--episode-dir", required=True, help="Path like hindi/2026-11-11 or marathi/story-slug")
+    parser = argparse.ArgumentParser(description="Build Hindi YouTube story episode")
+    parser.add_argument("--episode-dir", required=True, help="Path like hindi/2026-11-11")
     parser.add_argument("--res", type=int, default=720, choices=[720, 1080], help="Output resolution height (720 or 1080)")
     parser.add_argument("--voicestudio", action="store_true", help="Synthesize missing raw audio via local VoiceStudio")
     parser.add_argument("--voicestudio-url", default=None, help="Local VoiceStudio URL (default http://127.0.0.1:8000)")

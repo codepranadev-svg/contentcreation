@@ -1,4 +1,4 @@
-"""Configuration and voice/path conventions for the Hindi & Marathi Storytelling Studio."""
+"""Configuration and voice/path conventions for the Hindi Storytelling Studio."""
 from __future__ import annotations
 
 import os
@@ -8,7 +8,6 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 ASSETS_DIR = ROOT_DIR / "assets"
 FONTS_DIR = ASSETS_DIR / "fonts"
 HINDI_DIR = ROOT_DIR / "hindi"
-MARATHI_DIR = ROOT_DIR / "marathi"
 
 SAMPLE_RATE = 44100
 CHANNELS = 2
@@ -23,21 +22,14 @@ DEFAULT_VOICES = {
         "male_lead": "voice-01",
         "female_lead": "voice-02",
     },
-    "mr": {
-        "narrator": "voice-03",
-        "male_lead": "voice-04",
-        "female_lead": "voice-05",
-    },
 }
 
 VOICESTUDIO_URL = os.environ.get("VOICESTUDIO_URL", "http://127.0.0.1:8000")
 
 
 def resolve_episode_dir(language: str, slug: str, date_str: str) -> Path:
-    """Resolve episode folder: hindi/<YYYY-MM-DD>/ or marathi/<story-slug>/."""
+    """Resolve Hindi episode folder: hindi/<YYYY-MM-DD>/."""
     lang = language.lower().strip()
     if lang in ("hi", "hindi"):
         return HINDI_DIR / date_str
-    if lang in ("mr", "marathi"):
-        return MARATHI_DIR / slug
-    raise ValueError(f"Unsupported language: {language}")
+    raise ValueError(f"Unsupported language (Hindi-only channel): {language}")
