@@ -1,8 +1,11 @@
-"""Configuration and voice/path conventions for the Hindi Storytelling Studio."""
+"""Configuration and voice/path conventions for Rishton Ke Mod — Hindi Storytelling Studio."""
 from __future__ import annotations
 
 import os
 from pathlib import Path
+
+CHANNEL_NAME = "Rishton Ke Mod"
+CHANNEL_NAME_HI = "रिश्तों के मोड़"
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 ASSETS_DIR = ROOT_DIR / "assets"

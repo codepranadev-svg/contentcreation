@@ -3,6 +3,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from .config import CHANNEL_NAME_HI
+
 SPEAKER_STYLES = {
     "narrator": ("Narrator", "&H00F2F0EB"),
     "female_lead": ("FemaleLead", "&H00D4D0FF"),
@@ -59,6 +61,7 @@ ScaledBorderAndShadow: yes
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: TitleCard,Noto Sans Devanagari,64,&H00F7E6C4,&H00FFFFFF,&H0010121C,&H99000000,-1,0,0,0,100,100,0,0,1,3,2,5,140,140,80,1
+Style: ChannelBrand,Noto Sans Devanagari,30,&H55F7E6C4,&H00FFFFFF,&H55080A12,&H00000000,-1,0,0,0,100,100,0,0,1,1.5,1,9,48,48,36,1
 Style: SceneTag,Noto Sans Devanagari,32,&H00C8D4E6,&H00FFFFFF,&H00080A12,&H80000000,-1,0,0,0,100,100,0,0,1,2,1,7,64,64,44,1
 Style: Narrator,Noto Sans Devanagari,52,&H00F5F2EB,&H0000E7FF,&H000B0D14,&H99000000,-1,0,0,0,100,100,0,0,1,3,1.5,2,130,130,66,1
 Style: FemaleLead,Noto Sans Devanagari,52,&H00E0D2FF,&H0000E7FF,&H000B0D14,&H99000000,-1,0,0,0,100,100,0,0,1,3,1.5,2,130,130,66,1
@@ -67,8 +70,11 @@ Style: MaleLead,Noto Sans Devanagari,52,&H009BE0FF,&H0000E7FF,&H000B0D14,&H99000
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
+    total_dur = float(manifest.get("total_duration_s", 600.0))
+    brand = _ass_escape(manifest.get("channel_name_hi") or CHANNEL_NAME_HI)
     events: list[str] = [
-        f"Dialogue: 1,{_ass_time(0.3)},{_ass_time(4.2)},TitleCard,,0,0,0,,{{\\fad(500,600)}}{title}"
+        f"Dialogue: 1,{_ass_time(0.3)},{_ass_time(4.2)},TitleCard,,0,0,0,,{{\\fad(500,600)}}{title}",
+        f"Dialogue: 2,0:00:00.00,{_ass_time(total_dur)},ChannelBrand,,0,0,0,,{brand}",
     ]
 
     for sc in manifest["scenes"]:

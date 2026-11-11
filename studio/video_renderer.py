@@ -7,7 +7,7 @@ from pathlib import Path
 
 import imageio_ffmpeg
 
-from .config import FONTS_DIR, SAMPLE_RATE
+from .config import CHANNEL_NAME_HI, FONTS_DIR, SAMPLE_RATE
 from .subtitle_engine import write_full_ass, write_shorts_ass, write_srt
 
 
@@ -222,7 +222,7 @@ def render_shorts_9x16_video(episode_dir: Path, manifest: dict, res: int = 720) 
     )
 
     hook_title = manifest.get("short_hook") or "रात 1:30 बजे की वो दस्तक..."
-    cta_text = "पूरी कहानी चैनल पर देखें — लिंक बायो में"
+    cta_text = f"पूरी कहानी '{CHANNEL_NAME_HI}' चैनल पर देखें"
     short_ass = episode_dir / "subtitles_shorts.ass"
     write_shorts_ass(short_cues, hook_title, cta_text, cursor, short_ass)
 
@@ -280,7 +280,7 @@ def render_thumbnails(episode_dir: Path, manifest: dict) -> tuple[Path, Path]:
     if not hero_img.exists():
         hero_img = episode_dir / manifest["scenes"][0]["image"]
 
-    badge = "दिल को छू लेने वाली कहानी"
+    badge = f"{CHANNEL_NAME_HI} • हिंदी कहानी"
     headline = "बारिश की वो आख़िरी रात..."
     subline = "जब 5 साल बाद अतीत ने दरवाज़ा खटखटाया!"
 
@@ -333,7 +333,7 @@ WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Badge,Noto Sans Devanagari,42,&H00FFFFFF,&H00FFFFFF,&H00121218,&HEE2438B8,-1,0,0,0,100,100,0,0,3,16,0,8,60,60,240,1
+Style: Badge,Noto Sans Devanagari,42,&H00FFFFFF,&H00FFFFFF,&H00121218,&HEE2438B8,-1,0,0,0,100,100,0,0,3,16,0,8,60,60,96,1
 Style: Headline,Noto Sans Devanagari,80,&H0073E1FF,&H00FFFFFF,&H00080A12,&HCC000000,-1,0,0,0,100,100,0,0,1,6,3,2,60,60,340,1
 Style: Subline,Noto Sans Devanagari,48,&H00FFFFFF,&H00FFFFFF,&H00080A12,&HCC000000,-1,0,0,0,100,100,0,0,1,4,2,2,60,60,220,1
 

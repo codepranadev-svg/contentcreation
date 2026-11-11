@@ -1,9 +1,12 @@
-# YouTube Upload Metadata — Hindi Episode (2026-11-11)
+# YouTube Upload Metadata — Rishton Ke Mod (`रिश्तों के मोड़`) | Episode 2026-11-11
+
+- **Channel Name:** **Rishton Ke Mod** (`रिश्तों के मोड़`)
+- **Suggested YouTube Handle:** `@RishtonKeMod`
 
 ## Recommended Titles (Pick 1 — High CTR + YouTube-Safe)
-1. **बारिश की वो आख़िरी रात... जब 5 साल बाद अतीत ने दरवाज़ा खटखटाया | Hindi Romantic Kahani**
-2. **रात 1:30 बजे की दस्तक और अधूरी चाहत | Emotional Relationship Story in Hindi | Suvichar Kahani**
-3. **शादी के बाद पहला प्यार लौट आए तो? | Heart Touching Hindi Audio Drama | Moral Romantic Story**
+1. **बारिश की वो आख़िरी रात... जब 5 साल बाद अतीत ने दरवाज़ा खटखटाया | Rishton Ke Mod | Hindi Romantic Kahani**
+2. **रात 1:30 बजे की दस्तक और अधूरी चाहत | Emotional Relationship Story in Hindi | रिश्तों के मोड़**
+3. **शादी के बाद पहला प्यार लौट आए तो? | Heart Touching Hindi Audio Drama | Rishton Ke Mod**
 
 ## Video Files in This Folder
 - **Full YouTube Video (16:9):** `baarish-ki-woh-aakhiri-raat_full_16x9.mp4`
@@ -16,7 +19,7 @@
 ```text
 रात के डेढ़ बजे मुंबई की तेज़ बारिश के बीच, जब मीरा अपने घर में अकेली थी, तब दरवाज़े पर हुई एक पुरानी दस्तक ने उसकी चार साल पुरानी खामोश शादी को सबसे बड़े मोड़ पर ला खड़ा किया। क्या अकेलापन और अधूरा प्यार इंसान को सीमा पार करने पर मजबूर कर देता है, या आत्मसम्मान और ईमानदारी कोई नया रास्ता दिखाती है?
 
-🎧 हेडफ़ोन लगाकर सुनें — यह एक मल्टी-वॉइस सिनेमैटिक हिंदी ऑडियो ड्रामा है।
+🎧 हेडफ़ोन लगाकर सुनें — यह 'रिश्तों के मोड़ (Rishton Ke Mod)' का मल्टी-वॉइस सिनेमैटिक हिंदी ऑडियो ड्रामा है।
 
 ⏱️ कहानी के हिस्से (Chapters):
 00:00 रात के डेढ़ बजे की दस्तक (कथावाचक)
@@ -28,13 +31,15 @@
 💬 आज का सवाल (कमेंट में ज़रूर बताएं):
 अगर आप मीरा की जगह होते, तो क्या चुनते — अतीत की अधूरी चाहत या अपने वर्तमान रिश्ते में सच्चाई?
 
+🔔 हर रोज़ ऐसी ही दिल को छू जाने वाली हिंदी कहानियों के लिए 'रिश्तों के मोड़ (Rishton Ke Mod)' चैनल को सब्सक्राइब करें।
+
 ⚠️ नोट: यह कहानी पूरी तरह काल्पनिक (Fictional) है और वयस्क दर्शकों के लिए भावनात्मक व पारिवारिक संबंधों पर आधारित है।
 
-#HindiKahani #RomanticStoryHindi #EmotionalKahani #HindiAudioStory #HeartTouchingStory #SuvicharHindi #RelationshipDrama #MidnightKahani #HindiStorytelling #MoralStoryHindi
+#RishtonKeMod #HindiKahani #RomanticStoryHindi #EmotionalKahani #HindiAudioStory #HeartTouchingStory #SuvicharHindi #RelationshipDrama #MidnightKahani #HindiStorytelling
 ```
 
 ## YouTube Tags
-`hindi romantic story, emotional hindi kahani, heart touching love story hindi, hindi audio story, husband wife relationship drama hindi, moral suvichar kahani, midnight romantic story hindi, forbidden love story hindi, kahaniyan hindi, hindi storytelling drama`
+`rishton ke mod, rishton ke mod hindi kahani, hindi romantic story, emotional hindi kahani, heart touching love story hindi, hindi audio story, husband wife relationship drama hindi, moral suvichar kahani, midnight romantic story hindi, kahaniyan hindi, hindi storytelling drama`
 
 ## Pinned Comment
-`आपकी नज़र में शादी में भावनात्मक अकेलेपन को कैसे दूर किया जाना चाहिए? अपनी राय नीचे कमेंट में ज़रूर लिखें ❤️`
+`आपकी नज़र में शादी में भावनात्मक अकेलेपन को कैसे दूर किया जाना चाहिए? अपनी राय नीचे कमेंट में ज़रूर लिखें ❤️ — रिश्तों के मोड़`

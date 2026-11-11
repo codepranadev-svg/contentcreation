@@ -1,7 +1,13 @@
-# Daily Hindi Story Generation Playbook
+# Rishton Ke Mod (`रिश्तों के मोड़`) — Daily Hindi Story Playbook
 
-## Folder Convention
-- **Hindi (date-wise):** `hindi/YYYY-MM-DD/`
+## Channel Identity & Folder Convention
+- **Channel Name:** **Rishton Ke Mod** (`रिश्तों के मोड़`)
+- **Handle:** `@RishtonKeMod`
+- **Episode Folders (date-wise):** `hindi/YYYY-MM-DD/`
+
+## Visual Guidelines (Photorealistic Live-Action Characters)
+- Always generate **raw 35mm live-action Indian cinema stills** (ARRI Alexa / 50mm lens, real skin pores, authentic Indian home/office lighting, natural film grain — avoid anime/cartoon/digital-painting prompts).
+- Reuse Scene 2 (`scene_02.jpg`, showing both leads clearly) as a **reference image** when generating the remaining scenes so the same realistic actors keep consistent faces and outfits throughout the episode.
 
 ## 7-Day Rotating Story Themes (Adult Relationship & Affair Drama — 100% YouTube-Safe)
 1. **Ex-Lover Monsoon Reunion** (unexpected late-night knock / airport delay)
@@ -11,9 +17,6 @@
 5. **College Reunion Secret** (after years, seeing the one who never confessed)
 6. **Overnight Train / Midnight Café Confession** (raw marriage truths)
 7. **Arranged Marriage Awakening** (hidden feelings & honest confrontation)
-
-## Visual Style Tip (Real Live-Action Look)
-Prefer **photorealistic 35mm live-action film stills** (or real royalty-free `.mp4` / `.jpg` stock clips) over anime/digital-painting art so stories feel like an authentic Hindi OTT web series.
 
 ## Daily CLI Usage
 ```bash
