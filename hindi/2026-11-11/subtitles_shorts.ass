@@ -1,0 +1,39 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: HookHeader,Noto Sans Devanagari,56,&H009BE0FF,&H00FFFFFF,&H000B0D14,&HBB000000,-1,0,0,0,100,100,0,0,1,4,2,8,70,70,180,1
+Style: Narrator,Noto Sans Devanagari,58,&H00FFFFFF,&H0000E7FF,&H00080A12,&H99000000,-1,0,0,0,100,100,0,0,1,4,2,2,80,80,380,1
+Style: FemaleLead,Noto Sans Devanagari,58,&H00E4D6FF,&H0000E7FF,&H00080A12,&H99000000,-1,0,0,0,100,100,0,0,1,4,2,2,80,80,380,1
+Style: MaleLead,Noto Sans Devanagari,58,&H00A3E4FF,&H0000E7FF,&H00080A12,&H99000000,-1,0,0,0,100,100,0,0,1,4,2,2,80,80,380,1
+Style: CtaFooter,Noto Sans Devanagari,46,&H00FFFFFF,&H00FFFFFF,&H00121520,&HCC1A1E2E,-1,0,0,0,100,100,0,0,3,18,0,2,80,80,170,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.00,0:00:58.56,HookHeader,,0,0,0,,{\fad(300,300)}रात 1:30 बजे की वो दस्तक...
+Dialogue: 2,0:00:52.56,0:00:58.56,CtaFooter,,0,0,0,,{\fad(300,300)}पूरी कहानी चैनल पर देखें — लिंक बायो में
+Dialogue: 0,0:00:00.00,0:00:02.03,Narrator,,0,0,0,,{\fad(100,100)}रात के डेढ़ बज रहे थे...
+Dialogue: 0,0:00:02.03,0:00:04.97,Narrator,,0,0,0,,{\fad(100,100)}और मुंबई की मूसलाधार बारिश खिड़की के शीशों
+Dialogue: 0,0:00:04.97,0:00:08.87,Narrator,,0,0,0,,{\fad(100,100)}से टकराकर मानो कोई भूली-बिसरी कहानी दोहरा रही थी।
+Dialogue: 0,0:00:08.87,0:00:11.30,Narrator,,0,0,0,,{\fad(100,100)}अंधेरी के अपने आठवें माले वाले
+Dialogue: 0,0:00:11.30,0:00:13.42,Narrator,,0,0,0,,{\fad(100,100)}फ्लैट में मीरा आज अकेली थी।
+Dialogue: 0,0:00:13.42,0:00:17.00,Narrator,,0,0,0,,{\fad(100,100)}उसके पति विक्रम ऑफिस के एक ज़रूरी प्रोजेक्ट के
+Dialogue: 0,0:00:17.00,0:00:20.24,Narrator,,0,0,0,,{\fad(100,100)}सिलसिले में दो दिनों के लिए पुणे गए हुए थे।
+Dialogue: 0,0:00:20.49,0:00:24.78,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}आरव\N{\rMaleLead}हदें तो हमने तब भी मानी थीं मीरा, जब पाँच साल पहले तुम्हारे
+Dialogue: 0,0:00:24.78,0:00:29.44,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}आरव\N{\rMaleLead}पापा की ज़िद और समाज के डर से हमारा रिश्ता तोड़ दिया गया था...
+Dialogue: 0,0:00:29.44,0:00:30.74,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}आरव\N{\rMaleLead}पर इस पागल दिल ने आज
+Dialogue: 0,0:00:30.74,0:00:32.82,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}आरव\N{\rMaleLead}तक किसी हद को स्वीकार नहीं किया।
+Dialogue: 0,0:00:32.82,0:00:36.65,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}आरव\N{\rMaleLead}तुम्हें क्या लगता है, इन पाँच सालों में मैंने
+Dialogue: 0,0:00:36.65,0:00:39.12,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}आरव\N{\rMaleLead}किसी और का हाथ थामने की कोशिश नहीं की?
+Dialogue: 0,0:00:39.12,0:00:40.43,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}आरव\N{\rMaleLead}की थी...
+Dialogue: 0,0:00:40.43,0:00:41.84,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}आरव\N{\rMaleLead}बहुत बार की थी।
+Dialogue: 0,0:00:42.09,0:00:44.35,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}मीरा\N{\rFemaleLead}मेरा हाथ छोड़ दो आरव...
+Dialogue: 0,0:00:44.35,0:00:48.96,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}मीरा\N{\rFemaleLead}प्लीज़, एक पल के लिए शांत होकर मेरी बात सुनो।
+Dialogue: 0,0:00:48.96,0:00:51.35,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}मीरा\N{\rFemaleLead}मैं तुमसे झूठ नहीं बोलूँगी...
+Dialogue: 0,0:00:51.35,0:00:54.68,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}मीरा\N{\rFemaleLead}जब तुमने अभी बारिश में मेरा ठंडा हाथ थामा,
+Dialogue: 0,0:00:54.68,0:00:58.31,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}मीरा\N{\rFemaleLead}तो एक सेकंड के लिए मेरा मन सचमुच बहक गया था।

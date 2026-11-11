@@ -1,0 +1,36 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: HookHeader,Noto Sans Devanagari,56,&H009BE0FF,&H00FFFFFF,&H000B0D14,&HBB000000,-1,0,0,0,100,100,0,0,1,4,2,8,70,70,180,1
+Style: Narrator,Noto Sans Devanagari,58,&H00FFFFFF,&H0000E7FF,&H00080A12,&H99000000,-1,0,0,0,100,100,0,0,1,4,2,2,80,80,380,1
+Style: FemaleLead,Noto Sans Devanagari,58,&H00E4D6FF,&H0000E7FF,&H00080A12,&H99000000,-1,0,0,0,100,100,0,0,1,4,2,2,80,80,380,1
+Style: MaleLead,Noto Sans Devanagari,58,&H00A3E4FF,&H0000E7FF,&H00080A12,&H99000000,-1,0,0,0,100,100,0,0,1,4,2,2,80,80,380,1
+Style: CtaFooter,Noto Sans Devanagari,46,&H00FFFFFF,&H00FFFFFF,&H00121520,&HCC1A1E2E,-1,0,0,0,100,100,0,0,3,18,0,2,80,80,170,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 2,0:00:00.00,0:00:56.12,HookHeader,,0,0,0,,{\fad(300,300)}पावसाळी रात्रीची अधुरी भेट...
+Dialogue: 2,0:00:50.12,0:00:56.12,CtaFooter,,0,0,0,,{\fad(300,300)}संपूर्ण कथा चॅनेलवर पहा
+Dialogue: 0,0:00:00.00,0:00:05.35,Narrator,,0,0,0,,{\fad(100,100)}लोणावळ्याच्या सह्याद्री डोंगररांगांत त्या संध्याकाळी इतकं दाट धुकं पसरलं होतं,
+Dialogue: 0,0:00:05.35,0:00:09.10,Narrator,,0,0,0,,{\fad(100,100)}की हाताच्या अंतरावरचंही काहीच स्पष्ट दिसत नव्हतं...
+Dialogue: 0,0:00:09.10,0:00:12.64,Narrator,,0,0,0,,{\fad(100,100)}आणि बाहेर कोसळणाऱ्या मुसळधार पावसाचा आवाज
+Dialogue: 0,0:00:12.64,0:00:15.41,Narrator,,0,0,0,,{\fad(100,100)}मनात दडलेल्या विचारांना अधिकच गडद करत होता।
+Dialogue: 0,0:00:15.41,0:00:19.36,Narrator,,0,0,0,,{\fad(100,100)}आर्किटेक्ट असलेल्या काव्याला वाटलं होतं की ही
+Dialogue: 0,0:00:19.36,0:00:23.09,Narrator,,0,0,0,,{\fad(100,100)}फक्त दोन दिवसांची साधी ऑफिस साईट व्हिजिट असेल...
+Dialogue: 0,0:00:23.34,0:00:26.02,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}सिद्धार्थ\N{\rMaleLead}भीती मलाही वाटत होती काव्या...
+Dialogue: 0,0:00:26.02,0:00:27.85,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}सिद्धार्थ\N{\rMaleLead}पण आज या पावसाने आणि धुक्याने
+Dialogue: 0,0:00:27.85,0:00:31.18,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}सिद्धार्थ\N{\rMaleLead}मनावरचं सगळं दडपण धुवून काढलं आहे।
+Dialogue: 0,0:00:31.18,0:00:32.46,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}सिद्धार्थ\N{\rMaleLead}तुला काय वाटतं,
+Dialogue: 0,0:00:32.46,0:00:38.31,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}सिद्धार्थ\N{\rMaleLead}मी पुण्यातल्या प्रत्येक आऊटस्टेशन प्रोजेक्टसाठी फक्त तुझ्याच टीमचं नाव का सुचवायचो?
+Dialogue: 0,0:00:38.31,0:00:41.60,MaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}सिद्धार्थ\N{\rMaleLead}कारण मला फक्त डिझाईन्स तपासायची नसतात...
+Dialogue: 0,0:00:42.04,0:00:43.66,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}काव्या\N{\rFemaleLead}थांब सिद्धार्थ...
+Dialogue: 0,0:00:43.66,0:00:46.00,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}काव्या\N{\rFemaleLead}एक पाऊल मागे घे, प्लीज़।
+Dialogue: 0,0:00:46.00,0:00:49.30,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}काव्या\N{\rFemaleLead}पहाटेचे पाच वाजलेत, रेंज थोडी आलीय बहुतेक...
+Dialogue: 0,0:00:49.30,0:00:52.37,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}काव्या\N{\rFemaleLead}आणि मघाशी जेव्हा माझा फोन वाजला,
+Dialogue: 0,0:00:52.37,0:00:55.87,FemaleLead,,0,0,0,,{\fad(100,100)\fs42\c&H006FD4FF&}काव्या\N{\rFemaleLead}तेव्हा मला वाटलं ऑफिसचा इमर्जन्सी मेल असेल।

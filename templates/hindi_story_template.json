@@ -1,0 +1,33 @@
+{
+  "title": "{{HINDI_TITLE}}",
+  "slug": "{{STORY_SLUG}}",
+  "language": "hi",
+  "date": "{{YYYY-MM-DD}}",
+  "genre": "Mature Relationship Drama & Romantic Temptation (YouTube-Safe)",
+  "characters": {
+    "narrator": {"name": "कथावाचक", "voice_id": "voice-00"},
+    "female_lead": {"name": "{{FEMALE_NAME}}", "voice_id": "voice-02"},
+    "male_lead": {"name": "{{MALE_NAME}}", "voice_id": "voice-01"}
+  },
+  "segments": [
+    {
+      "id": "hi_01",
+      "scene_number": 1,
+      "scene_title": "Hook & Atmosphere",
+      "speaker": "narrator",
+      "voice_id": "voice-00",
+      "situation": "midnight_rain_hook",
+      "dsp_preset": "midnight_narration",
+      "director": {"energy": "steady", "emotion": "mysterious", "pace": "measured", "intimacy": "intimate"},
+      "soundscape": {"ambience": "rain_heavy", "music": "melancholy_piano", "ambience_db": -22, "music_db": -20},
+      "pace_multiplier": 0.97,
+      "pause_before_ms": 400,
+      "pause_after_ms": 950,
+      "image": "scenes/scene_01.jpg",
+      "camera_motion": "slow_zoom_in",
+      "include_in_short": true,
+      "short_max_sec": 22,
+      "text": "{{900-1300 chars Devanagari Hindi hook & setting}}"
+    }
+  ]
+}
