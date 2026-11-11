@@ -4,7 +4,7 @@
   "channel": "Rishton Ke Mod (रिश्तों के मोड़)",
   "language": "hi",
   "date": "2026-11-11",
-  "visual_style": "Photorealistic 35mm Live-Action Indian Cinema",
+  "visual_style": "Photorealistic 35mm Multi-Shot Live-Action Indian Cinema",
   "genre": "Mature Relationship Drama & Romantic Temptation (YouTube-Safe)",
   "characters": {
     "narrator": {"name": "कथावाचक", "voice_id": "voice-00"},
@@ -25,7 +25,13 @@
       "pace_multiplier": 0.97,
       "pause_before_ms": 400,
       "pause_after_ms": 950,
-      "image": "scenes/scene_01.jpg",
+      "image": "scenes/shot_01a.jpg",
+      "short_image": "scenes/shot_01c.jpg",
+      "shots": [
+        {"image": "scenes/shot_01a.jpg", "camera_motion": "slow_zoom_in", "weight": 0.36},
+        {"image": "scenes/shot_01b.jpg", "camera_motion": "pan_right", "weight": 0.30},
+        {"image": "scenes/shot_01c.jpg", "camera_motion": "slow_zoom_out", "weight": 0.34}
+      ],
       "camera_motion": "slow_zoom_in",
       "include_in_short": true,
       "short_max_sec": 22,
@@ -44,7 +50,12 @@
       "pace_multiplier": 0.95,
       "pause_before_ms": 500,
       "pause_after_ms": 900,
-      "image": "scenes/scene_02.jpg",
+      "image": "scenes/shot_02a.jpg",
+      "shots": [
+        {"image": "scenes/shot_02a.jpg", "camera_motion": "slow_zoom_in", "weight": 0.34},
+        {"image": "scenes/shot_02b.jpg", "camera_motion": "pan_right", "weight": 0.36},
+        {"image": "scenes/shot_02c.jpg", "camera_motion": "slow_zoom_out", "weight": 0.30}
+      ],
       "camera_motion": "pan_right",
       "include_in_short": false,
       "text": "आरव... अंदर आ जाओ, तुम पूरे भीग चुके हो। बाहर इतनी तेज़ बिजली चमक रही है, और ऊपर से देखो लाइट भी जा चुकी है। रुको... मैं मोमबत्ती जलाती हूँ और तुम्हारे लिए तौलिया और अदरक वाली गरम चाय लेकर आती हूँ। सच कहूँ तो पाँच साल बाद तुम्हें यूँ अचानक अपने दरवाज़े पर देखकर मेरे हाथ अभी तक काँप रहे हैं। बैठो न... हाँ, बिल्कुल वैसे ही जैसे हम कॉलेज के बाहर टपरी पर बैठा करते थे। जानते हो आरव... शादी के बाद से इस घर में दुनिया की हर चीज़ है। बड़ा फ्लैट है, आराम है, समाज में इज़्ज़त है, वक्त पर हर सुख-सुविधा मिल जाती है। मगर फिर भी... शाम होते-होते इस बड़े कमरे का सन्नाटा जैसे काटने को दौड़ता है। विक्रम बुरे इंसान नहीं हैं, पर उनके पास मेरे लिए, मेरी अनकही बातों के लिए कभी वक्त ही नहीं बचता। हम दोनों एक ही छत के नीचे रहते हैं, एक ही मेज़ पर खाना खाते हैं, लेकिन महीनों से हमने बैठकर दिल से एक बात तक नहीं की। जब इंसान को अपने ही घर में अनदेखा कर दिया जाए न आरव, तो अंदर से बहुत कुछ टूट जाता है। और आज जब तुमने भीगते हुए उस पुराने कंगन के साथ मेरा नाम पुकारा... तो लगा जैसे पाँच साल बाद किसी ने मुझे सच में देखा है, महसूस किया है। पर आरव, प्लीज़... अपनी आवाज़ धीमी रखना। मैं अब एक शादीशुदा औरत हूँ... हमें अपनी हद किसी भी हाल में याद रखनी होगी।"
@@ -62,7 +73,14 @@
       "pace_multiplier": 0.98,
       "pause_before_ms": 450,
       "pause_after_ms": 1000,
-      "image": "scenes/scene_03.jpg",
+      "image": "scenes/shot_03a.jpg",
+      "short_image": "scenes/shot_03b.jpg",
+      "rain_overlay": true,
+      "shots": [
+        {"image": "scenes/shot_03a.jpg", "camera_motion": "slow_zoom_out", "weight": 0.34, "rain_overlay": true},
+        {"image": "scenes/shot_03b.jpg", "camera_motion": "slow_zoom_in", "weight": 0.36, "rain_overlay": true},
+        {"image": "scenes/shot_03c.jpg", "camera_motion": "pan_left", "weight": 0.30, "rain_overlay": true}
+      ],
       "camera_motion": "slow_zoom_out",
       "include_in_short": true,
       "short_max_sec": 20,
@@ -81,7 +99,13 @@
       "pace_multiplier": 0.94,
       "pause_before_ms": 600,
       "pause_after_ms": 1100,
-      "image": "scenes/scene_04.jpg",
+      "image": "scenes/shot_04b.jpg",
+      "short_image": "scenes/shot_04b.jpg",
+      "shots": [
+        {"image": "scenes/shot_04a.jpg", "camera_motion": "slow_zoom_in", "weight": 0.32},
+        {"image": "scenes/shot_04b.jpg", "camera_motion": "pan_right", "weight": 0.36},
+        {"image": "scenes/shot_04c.jpg", "camera_motion": "slow_zoom_out", "weight": 0.32}
+      ],
       "camera_motion": "slow_zoom_in",
       "include_in_short": true,
       "short_max_sec": 15,
@@ -100,7 +124,12 @@
       "pace_multiplier": 0.97,
       "pause_before_ms": 700,
       "pause_after_ms": 1200,
-      "image": "scenes/scene_05.jpg",
+      "image": "scenes/shot_05b.jpg",
+      "shots": [
+        {"image": "scenes/shot_05a.jpg", "camera_motion": "slow_zoom_in", "weight": 0.33},
+        {"image": "scenes/shot_05b.jpg", "camera_motion": "pan_left", "weight": 0.37},
+        {"image": "scenes/shot_05c.jpg", "camera_motion": "slow_zoom_out", "weight": 0.30}
+      ],
       "camera_motion": "pan_left",
       "include_in_short": false,
       "text": "सुबह के पांच बजते-बजते मुंबई की वो तेज़ बारिश धीमी होकर थम चुकी थी। बालकनी के गीले काँच से हल्की सुनहरी रोशनी कमरे के अंदर झाँकने लगी थी। आरव ने बिना एक शब्द कहे कुछ पल मीरा की आँखों में देखा... उसकी नज़र में अब कोई ज़िद या शिकायत नहीं थी, बल्कि मीरा के फ़ैसले के लिए एक गहरा, खामोश सम्मान था। उसने चाँदी का वो पुराना कंगन मेज़ पर धीरे से रखा, मुस्कुराया और चुपचाप दरवाज़े से बाहर निकल गया। उस रात मीरा ने शायद अपनी ज़िंदगी का सबसे कठिन, मगर सबसे सच्चा इम्तिहान पास किया था। उसने न तो अकेलेपन की कमज़ोरी में कोई छुपता हुआ रिश्ता जोड़ा, और न ही अपने घर की खामोशी को किस्मत मानकर चुप बैठी रही। सुबह चाय बनाते हुए उसने अपना फोन उठाया और विक्रम को एक लंबा संदेश लिखा— कि जब वो लौटें, तो उन्हें बैठकर अपने रिश्ते और अपनी दूरियों के बारे में खुलकर बात करनी होगी। दोस्तों, कई बार ज़िंदगी हमें ऐसे मोड़ पर लाती है जहाँ दिल की चाहत और आत्मसम्मान के बीच एक बारीक लकीर होती है। अगर आप मीरा की जगह होते, तो क्या चुनते—अतीत का वो अधूरा प्यार, या अपने वर्तमान की सच्चाई और ईमानदारी? कमेंट में अपनी राय ज़रूर लिखें, और ऐसी ही दिल को छू जाने वाली कहानियों के लिए चैनल को सब्सक्राइब करना न भूलें।"

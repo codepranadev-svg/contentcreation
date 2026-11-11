@@ -4,7 +4,7 @@
   "channel": "Rishton Ke Mod (रिश्तों के मोड़)",
   "language": "hi",
   "date": "{{YYYY-MM-DD}}",
-  "visual_style": "Photorealistic 35mm Live-Action Indian Cinema",
+  "visual_style": "Photorealistic 35mm Multi-Shot Live-Action Indian Cinema",
   "genre": "Mature Relationship Drama & Romantic Temptation (YouTube-Safe)",
   "characters": {
     "narrator": {"name": "कथावाचक", "voice_id": "voice-00"},
@@ -25,7 +25,13 @@
       "pace_multiplier": 0.97,
       "pause_before_ms": 400,
       "pause_after_ms": 950,
-      "image": "scenes/scene_01.jpg",
+      "image": "scenes/shot_01a.jpg",
+      "short_image": "scenes/shot_01c.jpg",
+      "shots": [
+        {"image": "scenes/shot_01a.jpg", "camera_motion": "slow_zoom_in", "weight": 0.36},
+        {"image": "scenes/shot_01b.jpg", "camera_motion": "pan_right", "weight": 0.30},
+        {"image": "scenes/shot_01c.jpg", "camera_motion": "slow_zoom_out", "weight": 0.34}
+      ],
       "camera_motion": "slow_zoom_in",
       "include_in_short": true,
       "short_max_sec": 22,

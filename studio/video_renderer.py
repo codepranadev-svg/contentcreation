@@ -1,14 +1,19 @@
-"""FFmpeg video & Devanagari thumbnail renderer for 16:9 YouTube and 9:16 Shorts."""
+"""FFmpeg multi-shot video & Devanagari thumbnail renderer for 16:9 YouTube and 9:16 Shorts."""
 from __future__ import annotations
 
 import os
 import subprocess
 from pathlib import Path
+from typing import Optional
 
 import imageio_ffmpeg
+import numpy as np
+from PIL import Image, ImageDraw
 
 from .config import CHANNEL_NAME_HI, FONTS_DIR, SAMPLE_RATE
 from .subtitle_engine import write_full_ass, write_shorts_ass, write_srt
+
+_VIDEO_EXTS = {".mp4", ".mov", ".webm", ".mkv", ".m4v"}
 
 
 def _motion_expr(motion: str, frames: int) -> tuple[str, str, str]:
@@ -32,35 +37,130 @@ def _motion_expr(motion: str, frames: int) -> tuple[str, str, str]:
     return z, x, y
 
 
+def render_rain_overlay_loop(out_mp4: Path, width: int, height: int, fps: int = 24) -> Path:
+    """Create a 2-second seamless falling-rain luminance overlay video."""
+    ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+    n_frames = fps * 2
+    rng = np.random.default_rng(2026)
+    n_drops = 145
+    xs = rng.uniform(0, width, n_drops)
+    ys = rng.uniform(0, height, n_drops)
+    speeds = rng.uniform(22.0, 42.0, n_drops)
+    lengths = rng.uniform(20.0, 48.0, n_drops)
+    alphas = rng.integers(50, 125, n_drops)
+
+    raw_frames: list[bytes] = []
+    for f in range(n_frames):
+        img = Image.new("RGB", (width, height), (0, 0, 0))
+        draw = ImageDraw.Draw(img)
+        for i in range(n_drops):
+            y0 = (ys[i] + f * speeds[i]) % height
+            x0 = (xs[i] - f * (speeds[i] * 0.14)) % width
+            y1 = y0 + lengths[i]
+            x1 = x0 - lengths[i] * 0.14
+            a = int(alphas[i])
+            draw.line((x0, y0, x1, y1), fill=(a, a, a), width=1)
+        raw_frames.append(np.array(img, dtype=np.uint8).tobytes())
+
+    proc = subprocess.Popen(
+        [
+            ffmpeg, "-hide_banner", "-loglevel", "error", "-y",
+            "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{width}x{height}", "-r", str(fps),
+            "-i", "-", "-c:v", "libx264", "-preset", "ultrafast", "-crf", "18",
+            "-pix_fmt", "yuv420p", str(out_mp4),
+        ],
+        stdin=subprocess.PIPE,
+    )
+    proc.communicate(b"".join(raw_frames))
+    if proc.returncode != 0:
+        raise RuntimeError("Failed to generate rain overlay loop")
+    return out_mp4
+
+
 def render_scene_clip(
-    image_path: Path,
+    media_path: Path,
     duration_s: float,
     motion: str,
     out_mp4: Path,
     width: int = 1280,
     height: int = 720,
     fps: int = 24,
+    rain_loop: Optional[Path] = None,
+    crf: int = 21,
 ) -> None:
+    """Render either a still photo (Ken Burns) or real video clip (.mp4/.mov) into a scene clip."""
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
-    frames = max(24, int(round(duration_s * fps)))
-    z, x, y = _motion_expr(motion, frames)
     threads = str(min(8, os.cpu_count() or 4))
-    up_w = int(width * 1.35)
-    up_h = int(height * 1.35)
-    vf = (
-        f"scale={up_w}:{up_h}:force_original_aspect_ratio=increase,"
-        f"crop={up_w}:{up_h},"
-        f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={width}x{height}:fps={fps},"
-        f"vignette=PI/5,format=yuv420p"
-    )
+    is_video = media_path.suffix.lower() in _VIDEO_EXTS
+
+    if is_video:
+        inputs = ["-stream_loop", "-1", "-t", f"{duration_s:.3f}", "-i", str(media_path)]
+        base_filter = (
+            f"[0:v]fps={fps},scale={width}:{height}:force_original_aspect_ratio=increase,"
+            f"crop={width}:{height},vignette=PI/5,format=yuv420p[base]"
+        )
+    else:
+        frames = max(24, int(round(duration_s * fps)))
+        z, x, y = _motion_expr(motion, frames)
+        up_w = int(width * 1.35)
+        up_h = int(height * 1.35)
+        inputs = ["-loop", "1", "-i", str(media_path)]
+        base_filter = (
+            f"[0:v]scale={up_w}:{up_h}:force_original_aspect_ratio=increase,"
+            f"crop={up_w}:{up_h},"
+            f"zoompan=z='{z}':x='{x}':y='{y}':d={frames}:s={width}x{height}:fps={fps},"
+            f"vignette=PI/5,format=yuv420p[base]"
+        )
+
+    if rain_loop and rain_loop.exists():
+        inputs.extend(["-stream_loop", "-1", "-t", f"{duration_s:.3f}", "-i", str(rain_loop)])
+        fc = (
+            f"{base_filter};"
+            f"[1:v]format=yuv420p[rn];"
+            f"[base][rn]blend=c0_mode=screen:c0_opacity=0.62:c1_mode=normal:c2_mode=normal[vout]"
+        )
+    else:
+        fc = base_filter.replace("[base]", "[vout]")
+
     subprocess.run(
         [
             ffmpeg, "-hide_banner", "-loglevel", "error", "-y",
-            "-loop", "1", "-i", str(image_path),
-            "-vf", vf,
+            *inputs,
+            "-filter_complex", fc,
+            "-map", "[vout]",
             "-t", f"{duration_s:.3f}",
-            "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf),
             "-threads", threads, "-an", str(out_mp4),
+        ],
+        check=True,
+    )
+
+
+def _crossfade_clips(clips: list[tuple[Path, float]], fade_s: float, out_mp4: Path, crf: int = 21) -> None:
+    if len(clips) == 1:
+        clips[0][0].replace(out_mp4)
+        return
+    ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
+    threads = str(min(8, os.cpu_count() or 4))
+    inputs: list[str] = []
+    for cp, _ in clips:
+        inputs.extend(["-i", str(cp)])
+    filters: list[str] = []
+    prev = "[0:v]"
+    offset = clips[0][1] - fade_s
+    for idx in range(1, len(clips)):
+        nxt = f"[xf{idx}]"
+        filters.append(f"{prev}[{idx}:v]xfade=transition=fade:duration={fade_s:.2f}:offset={offset:.3f}{nxt}")
+        prev = nxt
+        offset += clips[idx][1] - fade_s
+    subprocess.run(
+        [
+            ffmpeg, "-hide_banner", "-loglevel", "error", "-y",
+            *inputs,
+            "-filter_complex", ";".join(filters),
+            "-map", prev,
+            "-c:v", "libx264", "-preset", "veryfast", "-crf", str(crf),
+            "-pix_fmt", "yuv420p", "-threads", threads, "-an", str(out_mp4),
         ],
         check=True,
     )
@@ -71,7 +171,8 @@ def render_full_16x9_video(episode_dir: Path, manifest: dict, res: int = 720) ->
     scenes_dir = episode_dir / "scenes"
     slug = manifest["slug"]
     fps = 24
-    fade_s = 0.75
+    scene_fade_s = 0.75
+    shot_fade_s = 0.55
     width, height = (1920, 1080) if res >= 1080 else (1280, 720)
 
     srt_path = episode_dir / "subtitles.srt"
@@ -79,22 +180,56 @@ def render_full_16x9_video(episode_dir: Path, manifest: dict, res: int = 720) ->
     write_srt(manifest["cues"], srt_path)
     write_full_ass(manifest, ass_path)
 
+    needs_rain = any(
+        sc.get("rain_overlay") or any(sh.get("rain_overlay") for sh in sc.get("shots", []))
+        for sc in manifest["scenes"]
+    )
+    rain_loop_path: Optional[Path] = None
+    if needs_rain:
+        rain_loop_path = scenes_dir / f"rain_loop_{width}x{height}.mp4"
+        render_rain_overlay_loop(rain_loop_path, width, height, fps=fps)
+
     total_dur_s = float(manifest["total_duration_s"])
     scene_clips: list[tuple[Path, float]] = []
     n_scenes = len(manifest["scenes"])
+
     for idx, sc in enumerate(manifest["scenes"]):
         start_s = 0.0 if idx == 0 else float(sc["scene_start"])
         end_s = total_dur_s if idx == n_scenes - 1 else float(sc["scene_end"])
-        dur = (end_s - start_s) + (fade_s if idx < n_scenes - 1 else 0.0)
-        clip_path = scenes_dir / f"{sc['id']}_vis.mp4"
-        img_path = episode_dir / sc["image"]
-        render_scene_clip(
-            img_path, dur, sc.get("camera_motion", "slow_zoom_in"),
-            clip_path, width=width, height=height, fps=fps,
-        )
-        scene_clips.append((clip_path, dur))
+        scene_dur = (end_s - start_s) + (scene_fade_s if idx < n_scenes - 1 else 0.0)
+        scene_vis_path = scenes_dir / f"{sc['id']}_vis.mp4"
 
-    inputs = []
+        shots = sc.get("shots") or [
+            {"image": sc["image"], "camera_motion": sc.get("camera_motion", "slow_zoom_in"), "weight": 1.0}
+        ]
+        if len(shots) == 1:
+            sh = shots[0]
+            use_rain = rain_loop_path if (sh.get("rain_overlay") or sc.get("rain_overlay")) else None
+            render_scene_clip(
+                episode_dir / sh["image"], scene_dur,
+                sh.get("camera_motion", sc.get("camera_motion", "slow_zoom_in")),
+                scene_vis_path, width=width, height=height, fps=fps, rain_loop=use_rain,
+            )
+        else:
+            raw_weights = [max(0.1, float(sh.get("weight", 1.0))) for sh in shots]
+            w_sum = sum(raw_weights)
+            shot_clips: list[tuple[Path, float]] = []
+            for s_idx, sh in enumerate(shots):
+                frac = raw_weights[s_idx] / w_sum
+                sh_dur = (scene_dur * frac) + (shot_fade_s if s_idx < len(shots) - 1 else 0.0)
+                sh_clip = scenes_dir / f"{sc['id']}_shot_{s_idx}.mp4"
+                use_rain = rain_loop_path if (sh.get("rain_overlay") or sc.get("rain_overlay")) else None
+                render_scene_clip(
+                    episode_dir / sh["image"], sh_dur,
+                    sh.get("camera_motion", "slow_zoom_in"),
+                    sh_clip, width=width, height=height, fps=fps, rain_loop=use_rain, crf=20,
+                )
+                shot_clips.append((sh_clip, sh_dur))
+            _crossfade_clips(shot_clips, shot_fade_s, scene_vis_path, crf=20)
+
+        scene_clips.append((scene_vis_path, scene_dur))
+
+    inputs: list[str] = []
     for clip_path, _ in scene_clips:
         inputs.extend(["-i", str(clip_path)])
     audio_idx = len(scene_clips)
@@ -102,14 +237,14 @@ def render_full_16x9_video(episode_dir: Path, manifest: dict, res: int = 720) ->
 
     filter_parts: list[str] = []
     prev_label = "[0:v]"
-    offset = scene_clips[0][1] - fade_s
+    offset = scene_clips[0][1] - scene_fade_s
     for idx in range(1, len(scene_clips)):
         out_label = f"[xf{idx}]"
         filter_parts.append(
-            f"{prev_label}[{idx}:v]xfade=transition=fade:duration={fade_s:.2f}:offset={offset:.3f}{out_label}"
+            f"{prev_label}[{idx}:v]xfade=transition=fade:duration={scene_fade_s:.2f}:offset={offset:.3f}{out_label}"
         )
         prev_label = out_label
-        offset += scene_clips[idx][1] - fade_s
+        offset += scene_clips[idx][1] - scene_fade_s
 
     box_y = int(height * 0.78)
     box_h = height - box_y
@@ -177,7 +312,7 @@ def render_shorts_9x16_video(episode_dir: Path, manifest: dict, res: int = 720) 
 
     slice_wavs: list[Path] = []
     short_cues: list[dict] = []
-    short_scenes_meta: list[tuple[Path, float]] = []
+    short_scenes_meta: list[tuple[Path, float, bool]] = []
     cursor = 0.0
 
     for idx, (sc, s0, s1) in enumerate(slices):
@@ -194,7 +329,8 @@ def render_shorts_9x16_video(episode_dir: Path, manifest: dict, res: int = 720) 
             check=True,
         )
         slice_wavs.append(sw)
-        short_scenes_meta.append((episode_dir / sc["image"], dur))
+        media_rel = sc.get("short_image") or sc["image"]
+        short_scenes_meta.append((episode_dir / media_rel, dur, bool(sc.get("rain_overlay", False))))
 
         for c in sc.get("cues", []):
             cs = float(c["start"])
@@ -229,22 +365,45 @@ def render_shorts_9x16_video(episode_dir: Path, manifest: dict, res: int = 720) 
     fps = 24
     vert_clips: list[Path] = []
     threads = str(min(8, os.cpu_count() or 4))
-    for idx, (img_path, dur) in enumerate(short_scenes_meta):
+    rain_vert: Optional[Path] = None
+    if any(r for _, _, r in short_scenes_meta):
+        rain_vert = scenes_dir / f"rain_loop_{w}x{h}.mp4"
+        render_rain_overlay_loop(rain_vert, w, h, fps=fps)
+
+    for idx, (media_path, dur, use_rain) in enumerate(short_scenes_meta):
         vclip = scenes_dir / f"{slug}_short_vis_{idx}.mp4"
+        is_video = media_path.suffix.lower() in _VIDEO_EXTS
         frames = max(24, int(round(dur * fps)))
-        vf = (
-            f"split=2[bg][fg];"
-            f"[bg]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
-            f"gblur=sigma=24,eq=brightness=-0.22:saturation=1.1[bgb];"
-            f"[fg]scale={w}:-2,zoompan=z='min(1.06,1.0+0.06*(on/{frames}))':"
-            f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={w}x{fg_h}:fps={fps}[fgz];"
-            f"[bgb][fgz]overlay=x=0:y={fg_y},drawbox=x=0:y={box_y}:w={w}:h={h-box_y}:color=black@0.48:t=fill,format=yuv420p"
+
+        if is_video:
+            inputs = ["-stream_loop", "-1", "-t", f"{dur:.3f}", "-i", str(media_path)]
+            fg_part = f"[fg]fps={fps},scale={w}:{fg_h}:force_original_aspect_ratio=increase,crop={w}:{fg_h}[fgz]"
+            bg_part = f"[bg]fps={fps},scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},gblur=sigma=24,eq=brightness=-0.22:saturation=1.1[bgb]"
+        else:
+            inputs = ["-loop", "1", "-i", str(media_path)]
+            bg_part = f"[bg]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},gblur=sigma=24,eq=brightness=-0.22:saturation=1.1[bgb]"
+            fg_part = (
+                f"[fg]scale={w}:-2,zoompan=z='min(1.06,1.0+0.06*(on/{frames}))':"
+                f"x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={frames}:s={w}x{fg_h}:fps={fps}[fgz]"
+            )
+
+        fc = (
+            f"[0:v]split=2[bg][fg];{bg_part};{fg_part};"
+            f"[bgb][fgz]overlay=x=0:y={fg_y},drawbox=x=0:y={box_y}:w={w}:h={h-box_y}:color=black@0.48:t=fill,format=yuv420p[comp]"
         )
+        if use_rain and rain_vert:
+            inputs.extend(["-stream_loop", "-1", "-t", f"{dur:.3f}", "-i", str(rain_vert)])
+            fc += ";[1:v]format=yuv420p[rn];[comp][rn]blend=c0_mode=screen:c0_opacity=0.60:c1_mode=normal:c2_mode=normal[vout]"
+        else:
+            fc = fc.replace("[comp]", "[vout]")
+
         subprocess.run(
             [
                 ffmpeg, "-hide_banner", "-loglevel", "error", "-y",
-                "-loop", "1", "-i", str(img_path),
-                "-vf", vf, "-t", f"{dur:.3f}",
+                *inputs,
+                "-filter_complex", fc,
+                "-map", "[vout]",
+                "-t", f"{dur:.3f}",
                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "24",
                 "-threads", threads, "-an", str(vclip),
             ],
@@ -277,7 +436,7 @@ def render_shorts_9x16_video(episode_dir: Path, manifest: dict, res: int = 720) 
 def render_thumbnails(episode_dir: Path, manifest: dict) -> tuple[Path, Path]:
     ffmpeg = imageio_ffmpeg.get_ffmpeg_exe()
     hero_img = episode_dir / manifest["scenes"][2]["image"]
-    if not hero_img.exists():
+    if not hero_img.exists() or hero_img.suffix.lower() in _VIDEO_EXTS:
         hero_img = episode_dir / manifest["scenes"][0]["image"]
 
     badge = f"{CHANNEL_NAME_HI} • हिंदी कहानी"
