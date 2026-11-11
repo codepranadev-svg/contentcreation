@@ -1,8 +1,10 @@
 {
   "title": "{{HINDI_TITLE}}",
   "slug": "{{STORY_SLUG}}",
+  "channel": "Rishton Ke Mod (रिश्तों के मोड़)",
   "language": "hi",
   "date": "{{YYYY-MM-DD}}",
+  "visual_style": "Photorealistic 35mm Live-Action Indian Cinema",
   "genre": "Mature Relationship Drama & Romantic Temptation (YouTube-Safe)",
   "characters": {
     "narrator": {"name": "कथावाचक", "voice_id": "voice-00"},
