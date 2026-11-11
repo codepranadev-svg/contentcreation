@@ -1,0 +1,19 @@
+# Python & venv
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# OS & temp artifacts
+.DS_Store
+*.tmp
+*.bak
+Unselected files/
+/tmp/
+*_dsp.wav
+*_raw_mix.wav
+*_master.wav
+*_vis.mp4
+*_short_*
+thumb_*.ass

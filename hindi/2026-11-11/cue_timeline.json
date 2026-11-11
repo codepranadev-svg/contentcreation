@@ -1,0 +1,2276 @@
+{
+  "title": "बारिश की वो आख़िरी रात — जब अतीत ने दरवाज़ा खटखटाया",
+  "slug": "baarish-ki-woh-aakhiri-raat",
+  "language": "hi",
+  "total_duration_s": 466.116,
+  "master_wav": "hindi/2026-11-11/scenes/baarish-ki-woh-aakhiri-raat_master.wav",
+  "master_mp3": "hindi/2026-11-11/baarish-ki-woh-aakhiri-raat_master.mp3",
+  "scenes": [
+    {
+      "id": "hi_01",
+      "scene_number": 1,
+      "scene_title": "रात के डेढ़ बजे की दस्तक",
+      "speaker": "narrator",
+      "character_name": "कथावाचक",
+      "image": "scenes/scene_01.jpg",
+      "camera_motion": "slow_zoom_in",
+      "scene_start": 1.4,
+      "voice_start": 1.8,
+      "voice_end": 82.708,
+      "scene_end": 83.658,
+      "duration": 82.258,
+      "include_in_short": true,
+      "short_max_sec": 22.0,
+      "soundscape": {
+        "ambience": "rain_heavy",
+        "music": "melancholy_piano",
+        "ambience_db": -22,
+        "music_db": -20
+      },
+      "cues": [
+        {
+          "text": "रात के डेढ़ बज रहे थे...",
+          "start": 1.8,
+          "end": 3.832,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "और मुंबई की मूसलाधार बारिश खिड़की के शीशों",
+          "start": 3.832,
+          "end": 6.775,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "से टकराकर मानो कोई भूली-बिसरी कहानी दोहरा रही थी।",
+          "start": 6.775,
+          "end": 10.669,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "अंधेरी के अपने आठवें माले वाले",
+          "start": 10.669,
+          "end": 13.102,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "फ्लैट में मीरा आज अकेली थी।",
+          "start": 13.102,
+          "end": 15.224,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "उसके पति विक्रम ऑफिस के एक ज़रूरी प्रोजेक्ट के",
+          "start": 15.224,
+          "end": 18.798,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "सिलसिले में दो दिनों के लिए पुणे गए हुए थे।",
+          "start": 18.798,
+          "end": 22.041,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "बाहर तेज़ हवा चल रही थी, बिजली बार-बार गुल हो रही थी,",
+          "start": 22.041,
+          "end": 27.065,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "और कमरे के सन्नाटे में सिर्फ़ दीवार घड़ी की टिक-टिक और बारिश की गूँज सुनाई दे रही थी।",
+          "start": 27.065,
+          "end": 34.612,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "मीरा खिड़की के पास खड़ी ठंडी होती चाय का कप थामे सोच रही थी",
+          "start": 34.612,
+          "end": 39.567,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "कि शादी के चार साल कब इतनी खामोशी में बदल गए, पता ही नहीं चला।",
+          "start": 39.567,
+          "end": 45.012,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "तभी अचानक...",
+          "start": 45.012,
+          "end": 46.063,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "मुख्य दरवाज़े पर एक हल्की, मगर जानी-पहचानी दस्तक हुई।",
+          "start": 46.063,
+          "end": 50.087,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "मीरा का दिल एक पल के लिए मानो थम गया।",
+          "start": 50.087,
+          "end": 53.23,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "इतनी रात को, इस तूफ़ान में भला कौन आ सकता है?",
+          "start": 53.23,
+          "end": 57.204,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "जब उसने काँपते हाथों से चिटखनी खोली,",
+          "start": 57.204,
+          "end": 60.197,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "तो सामने आरव खड़ा था...",
+          "start": 60.197,
+          "end": 62.039,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "पूरा भीगा हुआ, बालों से पानी टपकता हुआ, आँखों में पाँच साल पुरानी तड़प और हाथ में",
+          "start": 62.039,
+          "end": 68.765,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "वो चाँदी का कंगन लिए, जो मीरा कभी कॉलेज की आख़िरी शाम उसके पास भूल आई थी।",
+          "start": 68.765,
+          "end": 74.151,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "क्या यह सिर्फ़ मौसम का इत्तेफ़ाक़ था...",
+          "start": 74.151,
+          "end": 77.214,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "या फिर मीरा की शांत शादीशुदा",
+          "start": 77.214,
+          "end": 79.607,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "ज़िंदगी के सबसे बड़े इम्तिहान की शुरुआत?",
+          "start": 79.607,
+          "end": 82.41,
+          "speaker": "narrator",
+          "scene_number": 1,
+          "character_name": "कथावाचक"
+        }
+      ]
+    },
+    {
+      "id": "hi_02",
+      "scene_number": 2,
+      "scene_title": "सन्नाटे और अदरक की चाय का सच",
+      "speaker": "female_lead",
+      "character_name": "मीरा",
+      "image": "scenes/scene_02.jpg",
+      "camera_motion": "pan_right",
+      "scene_start": 83.658,
+      "voice_start": 84.158,
+      "voice_end": 183.026,
+      "scene_end": 183.926,
+      "duration": 100.268,
+      "include_in_short": false,
+      "short_max_sec": 18.0,
+      "soundscape": {
+        "ambience": "rain_soft",
+        "music": "warm_romance",
+        "ambience_db": -25,
+        "music_db": -20
+      },
+      "cues": [
+        {
+          "text": "आरव...",
+          "start": 84.158,
+          "end": 85.589,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "अंदर आ जाओ, तुम पूरे भीग चुके हो।",
+          "start": 85.589,
+          "end": 88.645,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "बाहर इतनी तेज़ बिजली चमक रही है,",
+          "start": 88.645,
+          "end": 91.161,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "और ऊपर से देखो लाइट भी जा चुकी है।",
+          "start": 91.161,
+          "end": 94.236,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "रुको...",
+          "start": 94.236,
+          "end": 95.178,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "मैं मोमबत्ती जलाती हूँ और तुम्हारे लिए तौलिया",
+          "start": 95.178,
+          "end": 98.335,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "और अदरक वाली गरम चाय लेकर आती हूँ।",
+          "start": 98.335,
+          "end": 101.591,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "सच कहूँ तो पाँच साल बाद तुम्हें यूँ अचानक अपने",
+          "start": 101.591,
+          "end": 104.819,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "दरवाज़े पर देखकर मेरे हाथ अभी तक काँप रहे हैं।",
+          "start": 104.819,
+          "end": 108.577,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "बैठो न...",
+          "start": 108.577,
+          "end": 109.599,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "हाँ, बिल्कुल वैसे ही जैसे हम कॉलेज",
+          "start": 109.599,
+          "end": 112.864,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "के बाहर टपरी पर बैठा करते थे।",
+          "start": 112.864,
+          "end": 114.899,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "जानते हो आरव...",
+          "start": 114.899,
+          "end": 116.662,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "शादी के बाद से इस घर",
+          "start": 116.662,
+          "end": 118.495,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "में दुनिया की हर चीज़ है।",
+          "start": 118.495,
+          "end": 120.25,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "बड़ा फ्लैट है, आराम है, समाज में इज़्ज़त है,",
+          "start": 120.25,
+          "end": 125.467,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "वक्त पर हर सुख-सुविधा मिल जाती है।",
+          "start": 125.467,
+          "end": 128.683,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "मगर फिर भी...",
+          "start": 128.683,
+          "end": 129.595,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "शाम होते-होते इस बड़े कमरे का",
+          "start": 129.595,
+          "end": 132.59,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "सन्नाटा जैसे काटने को दौड़ता है।",
+          "start": 132.59,
+          "end": 134.836,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "विक्रम बुरे इंसान नहीं हैं, पर उनके पास मेरे लिए,",
+          "start": 134.836,
+          "end": 139.414,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "मेरी अनकही बातों के लिए कभी वक्त ही नहीं बचता।",
+          "start": 139.414,
+          "end": 142.872,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "हम दोनों एक ही छत के नीचे रहते हैं, एक ही मेज़ पर खाना खाते हैं,",
+          "start": 142.872,
+          "end": 148.703,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "लेकिन महीनों से हमने बैठकर दिल से एक बात तक नहीं की।",
+          "start": 148.703,
+          "end": 153.102,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "जब इंसान को अपने ही घर में अनदेखा कर दिया जाए न आरव,",
+          "start": 153.102,
+          "end": 157.481,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "तो अंदर से बहुत कुछ टूट जाता है।",
+          "start": 157.481,
+          "end": 160.527,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "और आज जब तुमने भीगते हुए उस",
+          "start": 160.527,
+          "end": 163.621,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "पुराने कंगन के साथ मेरा नाम पुकारा...",
+          "start": 163.621,
+          "end": 166.388,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "तो लगा जैसे पाँच साल बाद किसी ने",
+          "start": 166.388,
+          "end": 169.373,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "मुझे सच में देखा है, महसूस किया है।",
+          "start": 169.373,
+          "end": 172.319,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "पर आरव, प्लीज़...",
+          "start": 172.319,
+          "end": 174.022,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "अपनी आवाज़ धीमी रखना।",
+          "start": 174.022,
+          "end": 176.096,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "मैं अब एक शादीशुदा औरत हूँ...",
+          "start": 176.096,
+          "end": 179.021,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "हमें अपनी हद किसी भी हाल में याद रखनी होगी।",
+          "start": 179.021,
+          "end": 182.868,
+          "speaker": "female_lead",
+          "scene_number": 2,
+          "character_name": "मीरा"
+        }
+      ]
+    },
+    {
+      "id": "hi_03",
+      "scene_number": 3,
+      "scene_title": "बालकनी की बारिश और अनकही चाहत",
+      "speaker": "male_lead",
+      "character_name": "आरव",
+      "image": "scenes/scene_03.jpg",
+      "camera_motion": "slow_zoom_out",
+      "scene_start": 183.926,
+      "voice_start": 184.376,
+      "voice_end": 273.728,
+      "scene_end": 274.728,
+      "duration": 90.801,
+      "include_in_short": true,
+      "short_max_sec": 20.0,
+      "soundscape": {
+        "ambience": "rain_heavy",
+        "music": "tense_pulse",
+        "ambience_db": -23,
+        "music_db": -19
+      },
+      "cues": [
+        {
+          "text": "हदें तो हमने तब भी मानी थीं मीरा, जब पाँच साल पहले तुम्हारे",
+          "start": 184.376,
+          "end": 188.666,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "पापा की ज़िद और समाज के डर से हमारा रिश्ता तोड़ दिया गया था...",
+          "start": 188.666,
+          "end": 193.321,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "पर इस पागल दिल ने आज",
+          "start": 193.321,
+          "end": 194.623,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "तक किसी हद को स्वीकार नहीं किया।",
+          "start": 194.623,
+          "end": 196.705,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "तुम्हें क्या लगता है, इन पाँच सालों में मैंने",
+          "start": 196.705,
+          "end": 200.534,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "किसी और का हाथ थामने की कोशिश नहीं की?",
+          "start": 200.534,
+          "end": 203.007,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "की थी...",
+          "start": 203.007,
+          "end": 204.317,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "बहुत बार की थी।",
+          "start": 204.317,
+          "end": 205.724,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "नए शहर में गया,",
+          "start": 205.724,
+          "end": 207.07,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "काम में खुद को डुबो दिया, नए लोगों से मिला।",
+          "start": 207.07,
+          "end": 210.298,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "मगर जब भी मुंबई में जून की पहली बारिश गिरती थी,",
+          "start": 210.298,
+          "end": 213.927,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "हर बार मुझे तुम्हारी वो बेफ़िक्र हँसी और तुम्हारे हाथों की चाय की खुशबू याद आ जाती थी।",
+          "start": 213.927,
+          "end": 221.074,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "मैं आज तुम्हारे घर अचानक नहीं आया मीरा...",
+          "start": 221.074,
+          "end": 224.092,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "दो दिन पहले ही इसी सोसायटी में मेरे दोस्त का फ्लैट देखा",
+          "start": 224.092,
+          "end": 228.122,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "और जब तुम्हें कल शाम नीचे देखा, तो खुद को रोक नहीं पाया।",
+          "start": 228.122,
+          "end": 232.806,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "देखो मेरी आँखों में मीरा...",
+          "start": 232.806,
+          "end": 235.303,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "तुम्हारे चेहरे की ये खामोश थकान बता",
+          "start": 235.303,
+          "end": 237.581,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "रही है कि तुम भी खुश नहीं हो।",
+          "start": 237.581,
+          "end": 239.778,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "तुम एक ऐसे रिश्ते में घुट रही हो जहाँ तुम्हारी मुस्कुराहट",
+          "start": 239.778,
+          "end": 244.658,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "और तुम्हारे आँसुओं से किसी को कोई फ़र्क़ ही नहीं पड़ता।",
+          "start": 244.658,
+          "end": 248.987,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "आज इस बालकनी में,",
+          "start": 248.987,
+          "end": 250.524,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "इस तेज़ बारिश के शोर में, दुनिया की नज़रों से दूर...",
+          "start": 250.524,
+          "end": 254.908,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "सिर्फ़ हम दोनों हैं।",
+          "start": 254.908,
+          "end": 256.759,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "कोई कुछ नहीं जानेगा।",
+          "start": 256.759,
+          "end": 258.651,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "और अगर तुम सच में चाहो...",
+          "start": 258.651,
+          "end": 260.608,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "तो कल सुबह हम इस झूठे सन्नाटे और इस",
+          "start": 260.608,
+          "end": 263.096,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "घुटन को हमेशा के लिए पीछे छोड़ सकते हैं।",
+          "start": 263.096,
+          "end": 266.759,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "बस एक बार सच कह दो मीरा...",
+          "start": 266.759,
+          "end": 268.661,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "क्या आज भी तुम्हारे दिल के किसी",
+          "start": 268.661,
+          "end": 271.229,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        },
+        {
+          "text": "कोने में मेरे लिए वही तड़प बाकी है?",
+          "start": 271.229,
+          "end": 273.506,
+          "speaker": "male_lead",
+          "scene_number": 3,
+          "character_name": "आरव"
+        }
+      ]
+    },
+    {
+      "id": "hi_04",
+      "scene_number": 4,
+      "scene_title": "बिस्तर के पास रखा वो छोटा सा नोट",
+      "speaker": "female_lead",
+      "character_name": "मीरा",
+      "image": "scenes/scene_04.jpg",
+      "camera_motion": "slow_zoom_in",
+      "scene_start": 274.728,
+      "voice_start": 275.328,
+      "voice_end": 371.408,
+      "scene_end": 372.508,
+      "duration": 97.781,
+      "include_in_short": true,
+      "short_max_sec": 15.0,
+      "soundscape": {
+        "ambience": "night_wind",
+        "music": "melancholy_piano",
+        "ambience_db": -27,
+        "music_db": -19
+      },
+      "cues": [
+        {
+          "text": "मेरा हाथ छोड़ दो आरव...",
+          "start": 275.328,
+          "end": 277.586,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "प्लीज़, एक पल के लिए शांत होकर मेरी बात सुनो।",
+          "start": 277.586,
+          "end": 282.195,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "मैं तुमसे झूठ नहीं बोलूँगी...",
+          "start": 282.195,
+          "end": 284.588,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "जब तुमने अभी बारिश में मेरा ठंडा हाथ थामा,",
+          "start": 284.588,
+          "end": 287.919,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "तो एक सेकंड के लिए मेरा मन सचमुच बहक गया था।",
+          "start": 287.919,
+          "end": 291.548,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "लगा कि काश आज रात समय यहीं रुक जाए,",
+          "start": 291.548,
+          "end": 293.966,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "काश कोई दुनिया न हो, कोई सवाल न हो, कोई जवाबदेही न हो।",
+          "start": 293.966,
+          "end": 298.966,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "जब इंसान अंदर से बहुत अकेला होता है न,",
+          "start": 298.966,
+          "end": 302.54,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "तो किसी पुराने प्यार का थोड़ा सा अपनापन भी दुनिया का सबसे बड़ा नशा बन जाता है।",
+          "start": 302.54,
+          "end": 308.748,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "लेकिन अभी जब मैं तुम्हारे लिए",
+          "start": 308.748,
+          "end": 311.301,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "पानी लेने अंदर कमरे में गई...",
+          "start": 311.301,
+          "end": 313.304,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "तो मेरी नज़र बेड के पास रखी मेज़ पर पड़ी।",
+          "start": 313.304,
+          "end": 317.196,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "वहाँ विक्रम का लिखा एक छोटा सा पीला नोट रखा था,",
+          "start": 317.196,
+          "end": 320.443,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "जो वो सुबह निकलने से पहले मेरी दवाइयों के नीचे दबाकर गए थे।",
+          "start": 320.443,
+          "end": 325.498,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "उसमें लिखा था— मीरा, आज मौसम खराब है, बालकनी ठीक से बंद करके सोना",
+          "start": 325.498,
+          "end": 330.948,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "और अपनी शाम वाली गोली समय पर ले लेना, मैं कल रात तक लौट आऊँगा।",
+          "start": 330.948,
+          "end": 336.49,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "आरव...",
+          "start": 336.49,
+          "end": 337.19,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "शायद विक्रम को मेरी तरह शायरी और प्यार जताना नहीं आता,",
+          "start": 337.19,
+          "end": 341.754,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "शायद काम के बोझ में हम दोनों एक-दूसरे से दूर हो गए हैं...",
+          "start": 341.754,
+          "end": 346.412,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "पर उन्होंने मुझ पर आँख मूँदकर भरोसा किया है।",
+          "start": 346.412,
+          "end": 350.161,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "अगर आज रात मैं चोरी-छिपे किसी अफ़ेयर के रास्ते पर कदम रख दूँ,",
+          "start": 350.161,
+          "end": 354.374,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "तो कल सुबह आईने में खुद से नज़रें कैसे मिला पाऊँगी?",
+          "start": 354.374,
+          "end": 358.937,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "जो रिश्ता अधूरा है,",
+          "start": 358.937,
+          "end": 360.719,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "उसे सँवारने या उससे ईमानदारी से अलग होने का पूरा हक़ मुझे है...",
+          "start": 360.719,
+          "end": 365.261,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "लेकिन अँधेरे में किसी के भरोसे को",
+          "start": 365.261,
+          "end": 368.76,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        },
+        {
+          "text": "धोखा देने का हक़ मुझे बिल्कुल नहीं।",
+          "start": 368.76,
+          "end": 371.178,
+          "speaker": "female_lead",
+          "scene_number": 4,
+          "character_name": "मीरा"
+        }
+      ]
+    },
+    {
+      "id": "hi_05",
+      "scene_number": 5,
+      "scene_title": "सुबह की पहली किरण और ईमानदार फ़ैसला",
+      "speaker": "narrator",
+      "character_name": "कथावाचक",
+      "image": "scenes/scene_05.jpg",
+      "camera_motion": "pan_left",
+      "scene_start": 372.508,
+      "voice_start": 373.208,
+      "voice_end": 462.316,
+      "scene_end": 463.516,
+      "duration": 91.007,
+      "include_in_short": false,
+      "short_max_sec": 18.0,
+      "soundscape": {
+        "ambience": "dawn_calm",
+        "music": "hopeful_dawn",
+        "ambience_db": -26,
+        "music_db": -20
+      },
+      "cues": [
+        {
+          "text": "सुबह के पांच बजते-बजते मुंबई की वो",
+          "start": 373.208,
+          "end": 376.014,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "तेज़ बारिश धीमी होकर थम चुकी थी।",
+          "start": 376.014,
+          "end": 378.598,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "बालकनी के गीले काँच से हल्की सुनहरी",
+          "start": 378.598,
+          "end": 381.845,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "रोशनी कमरे के अंदर झाँकने लगी थी।",
+          "start": 381.845,
+          "end": 384.19,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "आरव ने बिना एक शब्द कहे",
+          "start": 384.19,
+          "end": 386.215,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "कुछ पल मीरा की आँखों में देखा...",
+          "start": 386.215,
+          "end": 388.858,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "उसकी नज़र में अब कोई ज़िद या शिकायत नहीं थी,",
+          "start": 388.858,
+          "end": 392.605,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "बल्कि मीरा के फ़ैसले के लिए एक गहरा, खामोश सम्मान था।",
+          "start": 392.605,
+          "end": 397.171,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "उसने चाँदी का वो पुराना कंगन मेज़ पर धीरे से रखा,",
+          "start": 397.171,
+          "end": 401.573,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "मुस्कुराया और चुपचाप दरवाज़े से बाहर निकल गया।",
+          "start": 401.573,
+          "end": 405.232,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "उस रात मीरा ने शायद अपनी ज़िंदगी का सबसे कठिन,",
+          "start": 405.232,
+          "end": 409.39,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "मगर सबसे सच्चा इम्तिहान पास किया था।",
+          "start": 409.39,
+          "end": 413.229,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "उसने न तो अकेलेपन की कमज़ोरी में कोई छुपता हुआ रिश्ता जोड़ा,",
+          "start": 413.229,
+          "end": 418.342,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "और न ही अपने घर की खामोशी को किस्मत मानकर चुप बैठी रही।",
+          "start": 418.342,
+          "end": 422.7,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "सुबह चाय बनाते हुए उसने अपना फोन उठाया और विक्रम को एक लंबा संदेश लिखा—",
+          "start": 422.7,
+          "end": 429.235,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "कि जब वो लौटें, तो उन्हें बैठकर अपने रिश्ते और अपनी दूरियों के बारे में खुलकर बात करनी होगी।",
+          "start": 429.235,
+          "end": 436.063,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "दोस्तों, कई बार ज़िंदगी हमें ऐसे मोड़ पर लाती है जहाँ",
+          "start": 436.063,
+          "end": 440.649,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "दिल की चाहत और आत्मसम्मान के बीच एक बारीक लकीर होती है।",
+          "start": 440.649,
+          "end": 445.357,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "अगर आप मीरा की जगह होते, तो क्या चुनते—अतीत का वो अधूरा प्यार,",
+          "start": 445.357,
+          "end": 450.743,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "या अपने वर्तमान की सच्चाई और ईमानदारी?",
+          "start": 450.743,
+          "end": 453.773,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "कमेंट में अपनी राय ज़रूर लिखें, और ऐसी ही दिल को",
+          "start": 453.773,
+          "end": 457.884,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        },
+        {
+          "text": "छू जाने वाली कहानियों के लिए चैनल को सब्सक्राइब करना न भूलें।",
+          "start": 457.884,
+          "end": 462.218,
+          "speaker": "narrator",
+          "scene_number": 5,
+          "character_name": "कथावाचक"
+        }
+      ]
+    }
+  ],
+  "cues": [
+    {
+      "text": "रात के डेढ़ बज रहे थे...",
+      "start": 1.8,
+      "end": 3.832,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "और मुंबई की मूसलाधार बारिश खिड़की के शीशों",
+      "start": 3.832,
+      "end": 6.775,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "से टकराकर मानो कोई भूली-बिसरी कहानी दोहरा रही थी।",
+      "start": 6.775,
+      "end": 10.669,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "अंधेरी के अपने आठवें माले वाले",
+      "start": 10.669,
+      "end": 13.102,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "फ्लैट में मीरा आज अकेली थी।",
+      "start": 13.102,
+      "end": 15.224,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "उसके पति विक्रम ऑफिस के एक ज़रूरी प्रोजेक्ट के",
+      "start": 15.224,
+      "end": 18.798,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "सिलसिले में दो दिनों के लिए पुणे गए हुए थे।",
+      "start": 18.798,
+      "end": 22.041,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "बाहर तेज़ हवा चल रही थी, बिजली बार-बार गुल हो रही थी,",
+      "start": 22.041,
+      "end": 27.065,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "और कमरे के सन्नाटे में सिर्फ़ दीवार घड़ी की टिक-टिक और बारिश की गूँज सुनाई दे रही थी।",
+      "start": 27.065,
+      "end": 34.612,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "मीरा खिड़की के पास खड़ी ठंडी होती चाय का कप थामे सोच रही थी",
+      "start": 34.612,
+      "end": 39.567,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "कि शादी के चार साल कब इतनी खामोशी में बदल गए, पता ही नहीं चला।",
+      "start": 39.567,
+      "end": 45.012,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "तभी अचानक...",
+      "start": 45.012,
+      "end": 46.063,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "मुख्य दरवाज़े पर एक हल्की, मगर जानी-पहचानी दस्तक हुई।",
+      "start": 46.063,
+      "end": 50.087,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "मीरा का दिल एक पल के लिए मानो थम गया।",
+      "start": 50.087,
+      "end": 53.23,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "इतनी रात को, इस तूफ़ान में भला कौन आ सकता है?",
+      "start": 53.23,
+      "end": 57.204,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "जब उसने काँपते हाथों से चिटखनी खोली,",
+      "start": 57.204,
+      "end": 60.197,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "तो सामने आरव खड़ा था...",
+      "start": 60.197,
+      "end": 62.039,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "पूरा भीगा हुआ, बालों से पानी टपकता हुआ, आँखों में पाँच साल पुरानी तड़प और हाथ में",
+      "start": 62.039,
+      "end": 68.765,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "वो चाँदी का कंगन लिए, जो मीरा कभी कॉलेज की आख़िरी शाम उसके पास भूल आई थी।",
+      "start": 68.765,
+      "end": 74.151,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "क्या यह सिर्फ़ मौसम का इत्तेफ़ाक़ था...",
+      "start": 74.151,
+      "end": 77.214,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "या फिर मीरा की शांत शादीशुदा",
+      "start": 77.214,
+      "end": 79.607,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "ज़िंदगी के सबसे बड़े इम्तिहान की शुरुआत?",
+      "start": 79.607,
+      "end": 82.41,
+      "speaker": "narrator",
+      "scene_number": 1,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "आरव...",
+      "start": 84.158,
+      "end": 85.589,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "अंदर आ जाओ, तुम पूरे भीग चुके हो।",
+      "start": 85.589,
+      "end": 88.645,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "बाहर इतनी तेज़ बिजली चमक रही है,",
+      "start": 88.645,
+      "end": 91.161,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "और ऊपर से देखो लाइट भी जा चुकी है।",
+      "start": 91.161,
+      "end": 94.236,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "रुको...",
+      "start": 94.236,
+      "end": 95.178,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "मैं मोमबत्ती जलाती हूँ और तुम्हारे लिए तौलिया",
+      "start": 95.178,
+      "end": 98.335,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "और अदरक वाली गरम चाय लेकर आती हूँ।",
+      "start": 98.335,
+      "end": 101.591,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "सच कहूँ तो पाँच साल बाद तुम्हें यूँ अचानक अपने",
+      "start": 101.591,
+      "end": 104.819,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "दरवाज़े पर देखकर मेरे हाथ अभी तक काँप रहे हैं।",
+      "start": 104.819,
+      "end": 108.577,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "बैठो न...",
+      "start": 108.577,
+      "end": 109.599,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "हाँ, बिल्कुल वैसे ही जैसे हम कॉलेज",
+      "start": 109.599,
+      "end": 112.864,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "के बाहर टपरी पर बैठा करते थे।",
+      "start": 112.864,
+      "end": 114.899,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "जानते हो आरव...",
+      "start": 114.899,
+      "end": 116.662,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "शादी के बाद से इस घर",
+      "start": 116.662,
+      "end": 118.495,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "में दुनिया की हर चीज़ है।",
+      "start": 118.495,
+      "end": 120.25,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "बड़ा फ्लैट है, आराम है, समाज में इज़्ज़त है,",
+      "start": 120.25,
+      "end": 125.467,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "वक्त पर हर सुख-सुविधा मिल जाती है।",
+      "start": 125.467,
+      "end": 128.683,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "मगर फिर भी...",
+      "start": 128.683,
+      "end": 129.595,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "शाम होते-होते इस बड़े कमरे का",
+      "start": 129.595,
+      "end": 132.59,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "सन्नाटा जैसे काटने को दौड़ता है।",
+      "start": 132.59,
+      "end": 134.836,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "विक्रम बुरे इंसान नहीं हैं, पर उनके पास मेरे लिए,",
+      "start": 134.836,
+      "end": 139.414,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "मेरी अनकही बातों के लिए कभी वक्त ही नहीं बचता।",
+      "start": 139.414,
+      "end": 142.872,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "हम दोनों एक ही छत के नीचे रहते हैं, एक ही मेज़ पर खाना खाते हैं,",
+      "start": 142.872,
+      "end": 148.703,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "लेकिन महीनों से हमने बैठकर दिल से एक बात तक नहीं की।",
+      "start": 148.703,
+      "end": 153.102,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "जब इंसान को अपने ही घर में अनदेखा कर दिया जाए न आरव,",
+      "start": 153.102,
+      "end": 157.481,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "तो अंदर से बहुत कुछ टूट जाता है।",
+      "start": 157.481,
+      "end": 160.527,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "और आज जब तुमने भीगते हुए उस",
+      "start": 160.527,
+      "end": 163.621,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "पुराने कंगन के साथ मेरा नाम पुकारा...",
+      "start": 163.621,
+      "end": 166.388,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "तो लगा जैसे पाँच साल बाद किसी ने",
+      "start": 166.388,
+      "end": 169.373,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "मुझे सच में देखा है, महसूस किया है।",
+      "start": 169.373,
+      "end": 172.319,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "पर आरव, प्लीज़...",
+      "start": 172.319,
+      "end": 174.022,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "अपनी आवाज़ धीमी रखना।",
+      "start": 174.022,
+      "end": 176.096,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "मैं अब एक शादीशुदा औरत हूँ...",
+      "start": 176.096,
+      "end": 179.021,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "हमें अपनी हद किसी भी हाल में याद रखनी होगी।",
+      "start": 179.021,
+      "end": 182.868,
+      "speaker": "female_lead",
+      "scene_number": 2,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "हदें तो हमने तब भी मानी थीं मीरा, जब पाँच साल पहले तुम्हारे",
+      "start": 184.376,
+      "end": 188.666,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "पापा की ज़िद और समाज के डर से हमारा रिश्ता तोड़ दिया गया था...",
+      "start": 188.666,
+      "end": 193.321,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "पर इस पागल दिल ने आज",
+      "start": 193.321,
+      "end": 194.623,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "तक किसी हद को स्वीकार नहीं किया।",
+      "start": 194.623,
+      "end": 196.705,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "तुम्हें क्या लगता है, इन पाँच सालों में मैंने",
+      "start": 196.705,
+      "end": 200.534,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "किसी और का हाथ थामने की कोशिश नहीं की?",
+      "start": 200.534,
+      "end": 203.007,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "की थी...",
+      "start": 203.007,
+      "end": 204.317,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "बहुत बार की थी।",
+      "start": 204.317,
+      "end": 205.724,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "नए शहर में गया,",
+      "start": 205.724,
+      "end": 207.07,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "काम में खुद को डुबो दिया, नए लोगों से मिला।",
+      "start": 207.07,
+      "end": 210.298,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "मगर जब भी मुंबई में जून की पहली बारिश गिरती थी,",
+      "start": 210.298,
+      "end": 213.927,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "हर बार मुझे तुम्हारी वो बेफ़िक्र हँसी और तुम्हारे हाथों की चाय की खुशबू याद आ जाती थी।",
+      "start": 213.927,
+      "end": 221.074,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "मैं आज तुम्हारे घर अचानक नहीं आया मीरा...",
+      "start": 221.074,
+      "end": 224.092,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "दो दिन पहले ही इसी सोसायटी में मेरे दोस्त का फ्लैट देखा",
+      "start": 224.092,
+      "end": 228.122,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "और जब तुम्हें कल शाम नीचे देखा, तो खुद को रोक नहीं पाया।",
+      "start": 228.122,
+      "end": 232.806,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "देखो मेरी आँखों में मीरा...",
+      "start": 232.806,
+      "end": 235.303,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "तुम्हारे चेहरे की ये खामोश थकान बता",
+      "start": 235.303,
+      "end": 237.581,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "रही है कि तुम भी खुश नहीं हो।",
+      "start": 237.581,
+      "end": 239.778,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "तुम एक ऐसे रिश्ते में घुट रही हो जहाँ तुम्हारी मुस्कुराहट",
+      "start": 239.778,
+      "end": 244.658,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "और तुम्हारे आँसुओं से किसी को कोई फ़र्क़ ही नहीं पड़ता।",
+      "start": 244.658,
+      "end": 248.987,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "आज इस बालकनी में,",
+      "start": 248.987,
+      "end": 250.524,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "इस तेज़ बारिश के शोर में, दुनिया की नज़रों से दूर...",
+      "start": 250.524,
+      "end": 254.908,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "सिर्फ़ हम दोनों हैं।",
+      "start": 254.908,
+      "end": 256.759,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "कोई कुछ नहीं जानेगा।",
+      "start": 256.759,
+      "end": 258.651,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "और अगर तुम सच में चाहो...",
+      "start": 258.651,
+      "end": 260.608,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "तो कल सुबह हम इस झूठे सन्नाटे और इस",
+      "start": 260.608,
+      "end": 263.096,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "घुटन को हमेशा के लिए पीछे छोड़ सकते हैं।",
+      "start": 263.096,
+      "end": 266.759,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "बस एक बार सच कह दो मीरा...",
+      "start": 266.759,
+      "end": 268.661,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "क्या आज भी तुम्हारे दिल के किसी",
+      "start": 268.661,
+      "end": 271.229,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "कोने में मेरे लिए वही तड़प बाकी है?",
+      "start": 271.229,
+      "end": 273.506,
+      "speaker": "male_lead",
+      "scene_number": 3,
+      "character_name": "आरव"
+    },
+    {
+      "text": "मेरा हाथ छोड़ दो आरव...",
+      "start": 275.328,
+      "end": 277.586,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "प्लीज़, एक पल के लिए शांत होकर मेरी बात सुनो।",
+      "start": 277.586,
+      "end": 282.195,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "मैं तुमसे झूठ नहीं बोलूँगी...",
+      "start": 282.195,
+      "end": 284.588,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "जब तुमने अभी बारिश में मेरा ठंडा हाथ थामा,",
+      "start": 284.588,
+      "end": 287.919,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "तो एक सेकंड के लिए मेरा मन सचमुच बहक गया था।",
+      "start": 287.919,
+      "end": 291.548,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "लगा कि काश आज रात समय यहीं रुक जाए,",
+      "start": 291.548,
+      "end": 293.966,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "काश कोई दुनिया न हो, कोई सवाल न हो, कोई जवाबदेही न हो।",
+      "start": 293.966,
+      "end": 298.966,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "जब इंसान अंदर से बहुत अकेला होता है न,",
+      "start": 298.966,
+      "end": 302.54,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "तो किसी पुराने प्यार का थोड़ा सा अपनापन भी दुनिया का सबसे बड़ा नशा बन जाता है।",
+      "start": 302.54,
+      "end": 308.748,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "लेकिन अभी जब मैं तुम्हारे लिए",
+      "start": 308.748,
+      "end": 311.301,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "पानी लेने अंदर कमरे में गई...",
+      "start": 311.301,
+      "end": 313.304,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "तो मेरी नज़र बेड के पास रखी मेज़ पर पड़ी।",
+      "start": 313.304,
+      "end": 317.196,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "वहाँ विक्रम का लिखा एक छोटा सा पीला नोट रखा था,",
+      "start": 317.196,
+      "end": 320.443,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "जो वो सुबह निकलने से पहले मेरी दवाइयों के नीचे दबाकर गए थे।",
+      "start": 320.443,
+      "end": 325.498,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "उसमें लिखा था— मीरा, आज मौसम खराब है, बालकनी ठीक से बंद करके सोना",
+      "start": 325.498,
+      "end": 330.948,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "और अपनी शाम वाली गोली समय पर ले लेना, मैं कल रात तक लौट आऊँगा।",
+      "start": 330.948,
+      "end": 336.49,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "आरव...",
+      "start": 336.49,
+      "end": 337.19,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "शायद विक्रम को मेरी तरह शायरी और प्यार जताना नहीं आता,",
+      "start": 337.19,
+      "end": 341.754,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "शायद काम के बोझ में हम दोनों एक-दूसरे से दूर हो गए हैं...",
+      "start": 341.754,
+      "end": 346.412,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "पर उन्होंने मुझ पर आँख मूँदकर भरोसा किया है।",
+      "start": 346.412,
+      "end": 350.161,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "अगर आज रात मैं चोरी-छिपे किसी अफ़ेयर के रास्ते पर कदम रख दूँ,",
+      "start": 350.161,
+      "end": 354.374,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "तो कल सुबह आईने में खुद से नज़रें कैसे मिला पाऊँगी?",
+      "start": 354.374,
+      "end": 358.937,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "जो रिश्ता अधूरा है,",
+      "start": 358.937,
+      "end": 360.719,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "उसे सँवारने या उससे ईमानदारी से अलग होने का पूरा हक़ मुझे है...",
+      "start": 360.719,
+      "end": 365.261,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "लेकिन अँधेरे में किसी के भरोसे को",
+      "start": 365.261,
+      "end": 368.76,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "धोखा देने का हक़ मुझे बिल्कुल नहीं।",
+      "start": 368.76,
+      "end": 371.178,
+      "speaker": "female_lead",
+      "scene_number": 4,
+      "character_name": "मीरा"
+    },
+    {
+      "text": "सुबह के पांच बजते-बजते मुंबई की वो",
+      "start": 373.208,
+      "end": 376.014,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "तेज़ बारिश धीमी होकर थम चुकी थी।",
+      "start": 376.014,
+      "end": 378.598,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "बालकनी के गीले काँच से हल्की सुनहरी",
+      "start": 378.598,
+      "end": 381.845,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "रोशनी कमरे के अंदर झाँकने लगी थी।",
+      "start": 381.845,
+      "end": 384.19,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "आरव ने बिना एक शब्द कहे",
+      "start": 384.19,
+      "end": 386.215,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "कुछ पल मीरा की आँखों में देखा...",
+      "start": 386.215,
+      "end": 388.858,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "उसकी नज़र में अब कोई ज़िद या शिकायत नहीं थी,",
+      "start": 388.858,
+      "end": 392.605,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "बल्कि मीरा के फ़ैसले के लिए एक गहरा, खामोश सम्मान था।",
+      "start": 392.605,
+      "end": 397.171,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "उसने चाँदी का वो पुराना कंगन मेज़ पर धीरे से रखा,",
+      "start": 397.171,
+      "end": 401.573,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "मुस्कुराया और चुपचाप दरवाज़े से बाहर निकल गया।",
+      "start": 401.573,
+      "end": 405.232,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "उस रात मीरा ने शायद अपनी ज़िंदगी का सबसे कठिन,",
+      "start": 405.232,
+      "end": 409.39,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "मगर सबसे सच्चा इम्तिहान पास किया था।",
+      "start": 409.39,
+      "end": 413.229,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "उसने न तो अकेलेपन की कमज़ोरी में कोई छुपता हुआ रिश्ता जोड़ा,",
+      "start": 413.229,
+      "end": 418.342,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "और न ही अपने घर की खामोशी को किस्मत मानकर चुप बैठी रही।",
+      "start": 418.342,
+      "end": 422.7,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "सुबह चाय बनाते हुए उसने अपना फोन उठाया और विक्रम को एक लंबा संदेश लिखा—",
+      "start": 422.7,
+      "end": 429.235,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "कि जब वो लौटें, तो उन्हें बैठकर अपने रिश्ते और अपनी दूरियों के बारे में खुलकर बात करनी होगी।",
+      "start": 429.235,
+      "end": 436.063,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "दोस्तों, कई बार ज़िंदगी हमें ऐसे मोड़ पर लाती है जहाँ",
+      "start": 436.063,
+      "end": 440.649,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "दिल की चाहत और आत्मसम्मान के बीच एक बारीक लकीर होती है।",
+      "start": 440.649,
+      "end": 445.357,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "अगर आप मीरा की जगह होते, तो क्या चुनते—अतीत का वो अधूरा प्यार,",
+      "start": 445.357,
+      "end": 450.743,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "या अपने वर्तमान की सच्चाई और ईमानदारी?",
+      "start": 450.743,
+      "end": 453.773,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "कमेंट में अपनी राय ज़रूर लिखें, और ऐसी ही दिल को",
+      "start": 453.773,
+      "end": 457.884,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    },
+    {
+      "text": "छू जाने वाली कहानियों के लिए चैनल को सब्सक्राइब करना न भूलें।",
+      "start": 457.884,
+      "end": 462.218,
+      "speaker": "narrator",
+      "scene_number": 5,
+      "character_name": "कथावाचक"
+    }
+  ]
+}
