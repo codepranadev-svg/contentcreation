@@ -32,8 +32,11 @@ pip install -r requirements.txt
 python -m studio.daily_pipeline --episode-dir hindi/2026-11-11
 ```
 
-### Multi-Shot & External `.mp4` Video Clip Support
-Each segment in `script.json` supports a `shots` array mixing photorealistic `.jpg` stills and real `.mp4` motion/lip-sync clips (e.g., from `Open-Higgsfield-AI`, `OpenMontage`, or `Pexels` via `studio/broll_tools.py`).
+### Multi-Shot & External `.mp4` Live-Action Video Clip Support
+Each segment in `script.json` supports a `shots` array mixing photorealistic `.jpg` stills and real `.mp4` motion/lip-sync clips (e.g., via `studio/live_action_api.py` with Google Veo 3.1 or Fal.ai Kling 2.6 + Sync LipSync, `Open-Higgsfield-AI`, `OpenMontage`, or `Pexels` via `studio/broll_tools.py`).
+
+Run the 1-click Google Colab notebook to generate & assemble 1080p moving-actor `.mp4` clips directly into Google Drive:
+- **[Open `colab_live_action_generator.ipynb` in Google Colab](https://colab.research.google.com/github/codepranadev-svg/contentcreation/blob/main/studio/colab_live_action_generator.ipynb)**
 
 ### Local [`debpalash/VoiceStudio`](https://github.com/debpalash/voicestudio) (`OmniVoice`) Integration
 Run VoiceStudio locally (`http://127.0.0.1:8000` or `VOICESTUDIO_URL`) and invoke:

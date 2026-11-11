@@ -30,19 +30,28 @@ def build_episode(
     export_voicestudio_markdown(script_data, episode_dir / "script_voicestudio.md")
 
     manifest_path = episode_dir / "cue_timeline.json"
+    manifest = None
     if skip_audio and manifest_path.exists():
-        print(f"[1/4] Reusing existing mastered audio & cue timeline in {episode_dir}...")
-        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        # Refresh visual shot definitions from script.json so dropped-in .mp4 clips take effect immediately.
-        seg_map = {s["id"]: s for s in script_data["segments"]}
-        for sc in manifest["scenes"]:
-            if sc["id"] in seg_map:
-                src = seg_map[sc["id"]]
-                sc["image"] = src["image"]
-                sc["short_image"] = src.get("short_image", src["image"])
-                sc["shots"] = src.get("shots", [])
-                sc["rain_overlay"] = bool(src.get("rain_overlay", False))
-    else:
+        candidate = json.loads(manifest_path.read_text(encoding="utf-8"))
+        wav_p = Path(candidate.get("master_wav", ""))
+        mp3_p = Path(candidate.get("master_mp3", ""))
+        if not wav_p.exists() and mp3_p.exists():
+            candidate["master_wav"] = str(mp3_p)
+            wav_p = mp3_p
+        if wav_p.exists():
+            print(f"[1/4] Reusing existing mastered audio & cue timeline in {episode_dir}...")
+            manifest = candidate
+            seg_map = {s["id"]: s for s in script_data["segments"]}
+            for sc in manifest["scenes"]:
+                if sc["id"] in seg_map:
+                    src = seg_map[sc["id"]]
+                    sc["image"] = src["image"]
+                    sc["short_image"] = src.get("short_image", src["image"])
+                    sc["shots"] = src.get("shots", [])
+                    sc["camera_motion"] = src.get("camera_motion", "slow_zoom_in")
+                    sc["rain_overlay"] = bool(src.get("rain_overlay", False))
+
+    if manifest is None:
         if use_voicestudio:
             client = VoiceStudioClient(voicestudio_url) if voicestudio_url else VoiceStudioClient()
             if not client.health_check():
