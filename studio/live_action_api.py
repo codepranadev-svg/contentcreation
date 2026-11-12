@@ -141,6 +141,48 @@ def generate_with_fal(episode_dir: Path, clips_dir: Path) -> int:
     return created
 
 
+def generate_with_sora(episode_dir: Path, clips_dir: Path, model: str = "sora-2") -> int:
+    from openai import OpenAI
+
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("Set OPENAI_API_KEY before running with --provider sora")
+
+    base_url = os.environ.get("OPENAI_BASE_URL") or None
+    client = OpenAI(api_key=api_key, base_url=base_url) if base_url else OpenAI(api_key=api_key)
+    script_data = json.loads((episode_dir / "script.json").read_text(encoding="utf-8"))
+    shot_prompts = _extract_shot_prompts(episode_dir / "15_shot_cinema_prompts.md")
+    clips_dir.mkdir(parents=True, exist_ok=True)
+    created = 0
+
+    for seg in script_data["segments"]:
+        for sh in seg.get("shots", []):
+            stem = Path(sh["image"]).stem
+            out_mp4 = clips_dir / f"{stem}.mp4"
+            if out_mp4.exists() and out_mp4.stat().st_size > 1024:
+                continue
+            keyframe = episode_dir / "scenes" / f"{stem}.jpg"
+            prompt = shot_prompts.get(stem, f"Photorealistic live-action cinematic sequence: {seg['scene_title']}")
+            print(f"[Sora] Generating {stem}.mp4 from {keyframe.name}...")
+            with keyframe.open("rb") as ref_fh:
+                video = client.videos.create(
+                    model=model,
+                    prompt=prompt,
+                    size="1280x720",
+                    seconds=8,
+                    input_reference=ref_fh,
+                )
+            while getattr(video, "status", "") in ("queued", "in_progress"):
+                time.sleep(15)
+                video = client.videos.retrieve(video.id)
+            if getattr(video, "status", "") != "completed":
+                raise RuntimeError(f"Sora video generation failed for {stem}: status={getattr(video, 'status', 'unknown')}")
+            content = client.videos.download_content(video.id, variant="video")
+            content.write_to_file(str(out_mp4))
+            created += 1
+    return created
+
+
 def swap_clips_and_render(episode_dir: Path, clips_dir: Path, res: int = 1080) -> dict:
     script_path = episode_dir / "script.json"
     script_data = json.loads(script_path.read_text(encoding="utf-8"))
@@ -168,10 +210,10 @@ def swap_clips_and_render(episode_dir: Path, clips_dir: Path, res: int = 1080) -
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate & assemble live-action .mp4 clips via Veo or Fal.ai")
+    parser = argparse.ArgumentParser(description="Generate & assemble live-action .mp4 clips via Veo, Fal.ai, or Sora")
     parser.add_argument("--episode-dir", required=True)
     parser.add_argument("--clips-dir", default=None)
-    parser.add_argument("--provider", choices=["veo", "fal", "none"], default="none")
+    parser.add_argument("--provider", choices=["veo", "fal", "sora", "none"], default="none")
     parser.add_argument("--res", type=int, default=1080, choices=[720, 1080])
     args = parser.parse_args()
 
@@ -181,6 +223,8 @@ def main() -> None:
         generate_with_veo(ep_dir, clips_dir)
     elif args.provider == "fal":
         generate_with_fal(ep_dir, clips_dir)
+    elif args.provider == "sora":
+        generate_with_sora(ep_dir, clips_dir)
 
     result = swap_clips_and_render(ep_dir, clips_dir, res=args.res)
     print(json.dumps(result, indent=2, ensure_ascii=False))
