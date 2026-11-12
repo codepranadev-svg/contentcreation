@@ -183,6 +183,50 @@ def generate_with_sora(episode_dir: Path, clips_dir: Path, model: str = "sora-2"
     return created
 
 
+def generate_with_ltx(episode_dir: Path, clips_dir: Path, model_id: str = "Lightricks/LTX-Video") -> int:
+    """Free open-source Image-to-Video (no API key needed) tuned for free 16GB T4 GPUs (Colab / Kaggle)."""
+    import torch
+    from diffusers import LTXImageToVideoPipeline
+    from diffusers.utils import export_to_video, load_image
+
+    if not torch.cuda.is_available():
+        raise RuntimeError("CUDA GPU required for --provider ltx (run in Google Colab T4 or Kaggle 2x T4)")
+
+    pipe = LTXImageToVideoPipeline.from_pretrained(model_id, torch_dtype=torch.float16)
+    pipe.enable_model_cpu_offload()
+    if hasattr(pipe, "vae") and hasattr(pipe.vae, "enable_tiling"):
+        pipe.vae.enable_tiling()
+
+    script_data = json.loads((episode_dir / "script.json").read_text(encoding="utf-8"))
+    shot_prompts = _extract_shot_prompts(episode_dir / "15_shot_cinema_prompts.md")
+    clips_dir.mkdir(parents=True, exist_ok=True)
+    created = 0
+    neg_prompt = "worst quality, inconsistent motion, blurry, jittery, distorted face, extra limbs"
+
+    for seg in script_data["segments"]:
+        for sh in seg.get("shots", []):
+            stem = Path(sh["image"]).stem
+            out_mp4 = clips_dir / f"{stem}.mp4"
+            if out_mp4.exists() and out_mp4.stat().st_size > 1024:
+                continue
+            keyframe = episode_dir / "scenes" / f"{stem}.jpg"
+            prompt = shot_prompts.get(stem, f"Photorealistic live-action cinematic sequence: {seg['scene_title']}")
+            print(f"[LTX Free T4] Generating {stem}.mp4 from {keyframe.name}...")
+            img = load_image(str(keyframe))
+            frames = pipe(
+                image=img,
+                prompt=prompt,
+                negative_prompt=neg_prompt,
+                width=704,
+                height=480,
+                num_frames=81,
+                num_inference_steps=30,
+            ).frames[0]
+            export_to_video(frames, str(out_mp4), fps=24)
+            created += 1
+    return created
+
+
 def swap_clips_and_render(episode_dir: Path, clips_dir: Path, res: int = 1080) -> dict:
     script_path = episode_dir / "script.json"
     script_data = json.loads(script_path.read_text(encoding="utf-8"))
@@ -210,10 +254,10 @@ def swap_clips_and_render(episode_dir: Path, clips_dir: Path, res: int = 1080) -
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate & assemble live-action .mp4 clips via Veo, Fal.ai, or Sora")
+    parser = argparse.ArgumentParser(description="Generate & assemble live-action .mp4 clips via Veo, Fal.ai, Sora, or Free LTX-Video")
     parser.add_argument("--episode-dir", required=True)
     parser.add_argument("--clips-dir", default=None)
-    parser.add_argument("--provider", choices=["veo", "fal", "sora", "none"], default="none")
+    parser.add_argument("--provider", choices=["veo", "fal", "sora", "ltx", "none"], default="none")
     parser.add_argument("--res", type=int, default=1080, choices=[720, 1080])
     args = parser.parse_args()
 
@@ -225,6 +269,8 @@ def main() -> None:
         generate_with_fal(ep_dir, clips_dir)
     elif args.provider == "sora":
         generate_with_sora(ep_dir, clips_dir)
+    elif args.provider == "ltx":
+        generate_with_ltx(ep_dir, clips_dir)
 
     result = swap_clips_and_render(ep_dir, clips_dir, res=args.res)
     print(json.dumps(result, indent=2, ensure_ascii=False))
